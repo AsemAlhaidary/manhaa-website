@@ -1,6 +1,6 @@
 const config = {
   siteName: 'منحى',
-  logoPath: '../assests/imgs/logo.png',
+  logoPath: '/src/assets/imgs/logo.png',
   pages: {
     home: '/',
     services: '/services',

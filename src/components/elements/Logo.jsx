@@ -1,8 +1,13 @@
-import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { config } from '../../data'
 
 export default function Logo() {
   return (
-    <img src={config.logoPath} alt={config.siteName} className='logo' />
+    <NavLink
+      to={config.pages.home}
+      className='logo-link'
+    >
+      <img src={config.logoPath} alt={config.siteName} className='logo' />
+    </NavLink>
   )
 }

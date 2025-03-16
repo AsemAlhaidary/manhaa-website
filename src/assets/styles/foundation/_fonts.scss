@@ -1,0 +1,50 @@
+$almarai: "/src/assets/fonts/Almarai";
+$fatimah: "/src/assets/fonts/Fatimah";
+
+@font-face {
+  font-family: "Almarai";
+  font-weight: lighter;
+  src: url("#{$almarai}/Light.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "Almarai";
+  font-weight: normal;
+  src: url("#{$almarai}/Regular.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "Almarai";
+  font-weight: bold;
+  src: url("#{$almarai}/Bold.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "Almarai";
+  font-weight: bolder;
+  src: url("#{$almarai}/ExtraBold.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "Fatimah";
+  font-weight: lighter;
+  src: url("#{$fatimah}/Light.otf") format("OpenType");
+}
+
+@font-face {
+  font-family: "Fatimah";
+  font-weight: normal;
+  src: url("#{$fatimah}/Regular.otf") format("OpenType");
+}
+
+@font-face {
+  font-family: "Fatimah";
+  font-weight: bold;
+  src: url("#{$fatimah}/Blod.otf") format("OpenType");
+}
+
+@font-face {
+  font-family: "Fatimah";
+  font-weight: bolder;
+  src: url("#{$fatimah}/Black.otf") format("OpenType");
+}

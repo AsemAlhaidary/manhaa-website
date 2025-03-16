@@ -8,9 +8,8 @@ const PAGES = config.pages
 
 function App() {
   return (
-    <>
-    <Header />
     <Router>
+      <Header />
       <Routes>
         <Route path={PAGES.home} element={<Home />} />
         <Route path={PAGES.services} element={<Services />} />
@@ -19,9 +18,8 @@ function App() {
         <Route path={PAGES.contact} element={<Contact />} />
         <Route path={PAGES.noMatch} element={<NoMatch />} />
       </Routes>
+      <Footer />
     </Router>
-    <Footer />
-    </>
   )
 }
 

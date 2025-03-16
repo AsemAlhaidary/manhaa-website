@@ -1,4 +1,4 @@
-import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { config } from '../../data'
 
 const MENU = config.headerMenu
@@ -9,7 +9,14 @@ export default function HeaderMenu() {
       <ul className='header-menu-list'>
         {Object.keys(MENU).map((key, index) => (
           <li key={index} className='header-menu-item'>
-            <a href={MENU[key].link()} className='header-menu-link'>{MENU[key].title}</a>
+            <NavLink
+              to={MENU[key].link()}
+              className={({ isActive }) =>
+                `header-menu-link${isActive ? ' active' : ''}`
+              }
+            >
+              {MENU[key].title}
+            </NavLink>
           </li>
         ))}
       </ul>
