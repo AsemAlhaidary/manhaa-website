@@ -41,7 +41,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  background-color: $primary;
+  background-color: $transparentPrimary;
   transform: translateX(-100%);
   transition: all $transition-duration ease-in-out;
   @include container-shadow;
@@ -111,7 +111,8 @@
 header {
   padding: 0.5rem 1rem;
   height: $header-height;
-  background-color: $primary;
+  background-color: $transparentPrimary;
+  @include glassmorphism;
 
   .row {
     padding: 0;

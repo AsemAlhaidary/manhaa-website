@@ -102,3 +102,19 @@
     }
   }
 }
+
+@mixin glassmorphism($action: 'add') {
+  $value: unset;
+
+  @if $action == 'add' {
+    $value: blur(20px);
+  } @else if $action == 'remove' {
+    $value: unset;
+  }
+
+  -webkit-backdrop-filter: $value;
+  -moz-backdrop-filter: $value;
+  -ms-backdrop-filter: $value;
+  -o-backdrop-filter: $value;
+  backdrop-filter: $value;
+}

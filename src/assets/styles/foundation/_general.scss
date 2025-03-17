@@ -10,6 +10,7 @@
 
 body {
   --container-max-width: $sm-size;
+  background-color: $primary;
 
   @media screen and (min-width: #{$md-size}) {
     --container-max-width: #{$md-size};
