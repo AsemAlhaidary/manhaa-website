@@ -32,6 +32,8 @@
   font-weight: normal;
   text-decoration: none;
   text-align: center;
+  transition: all $transition-duration ease-in-out;
+  cursor: pointer;
 }
 
 @mixin buttonPrimary {

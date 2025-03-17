@@ -5,7 +5,7 @@ const MENU = config.headerMenu
 
 export default function HeaderNav() {
   return (
-    <nav className='header-menu-container'>
+    <nav className='header-menu-container order-0 mb'>
       <input type='checkbox' name='open-navbar' id='open-navbar' className='controller' />
       <label htmlFor='open-navbar' className='navbar-toggle flex mb'>
         <span></span>

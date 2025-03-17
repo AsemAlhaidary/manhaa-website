@@ -5,11 +5,9 @@ export default function Header() {
   return (
     <header>
       <div className='row wrapper'>
-        <div className='header-group'>
-          <Logo />
-          <HeaderNav />
-        </div>
-        <div className='buttons-group'>
+        <Logo />
+        <HeaderNav />
+        <div className='buttons-group order-2 mb'>
           <Button text={config.pages.contact.title} variant="primary" action={config.pages.contact.link} />
         </div>
       </div>

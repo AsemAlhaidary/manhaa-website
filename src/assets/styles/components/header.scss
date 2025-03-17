@@ -26,7 +26,7 @@
     border: 2px solid $accent;
     border-radius: 2px;
     background-color: $accent;
-    transition: all $header-transition-duration ease-in-out;
+    transition: all $transition-duration ease-in-out;
   }
 }
 
@@ -43,7 +43,7 @@
   gap: 0.5rem;
   background-color: $primary;
   transform: translateX(-100%);
-  transition: all $header-transition-duration ease-in-out;
+  transition: all $transition-duration ease-in-out;
   @include container-shadow;
 
   .header-navbar-list {
@@ -87,11 +87,11 @@
     transform: unset;
     box-shadow: unset;
 
-    .nav-list {
+    .header-navbar-list {
       flex-direction: row;
 
-      .nav {
-        .nav-link {
+      .header-navbar-item {
+        .header-navbar-link {
 
           &:active,
           &.active {
@@ -120,27 +120,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
   }
 
-  .header-group {
+  .logo-link {
+    margin-inline-end: auto;
     display: flex;
-    align-items: center;
-    gap: 1rem;
 
-    .logo-link {
-      display: flex;
-      order: 1;
-
-      img {
-        height: 50px;
-        object-fit: contain;
-        object-position: center;
-        filter: grayscale(100%) brightness(1000%) contrast(100%);
-      }
+    @media screen and (min-width: #{$md-size}) {
+      margin: unset;
     }
 
-    .header-menu-container {
-      order: 0;
+    img {
+      height: 50px;
+      object-fit: contain;
+      object-position: center;
+      filter: grayscale(100%) brightness(1000%) contrast(100%);
     }
   }
 }
