@@ -3,7 +3,7 @@ import { config } from '../data'
 
 export default function Contact() {
     useEffect(() => {
-        document.title = 'تواصل معنا - ' + config.siteName
+        document.title = config.pages.contact.title + ' - ' + config.siteName
     }, [])
 
     return (

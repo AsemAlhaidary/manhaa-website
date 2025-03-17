@@ -3,7 +3,7 @@ import { config } from '../data'
 
 export default function Home() {
     useEffect(() => {
-        document.title = 'الرئيسية - ' + config.siteName
+        document.title = config.pages.home.title + ' - ' + config.siteName
     }, [])
 
     return (

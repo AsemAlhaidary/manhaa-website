@@ -11,12 +11,12 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path={PAGES.home} element={<Home />} />
-        <Route path={PAGES.services} element={<Services />} />
-        <Route path={PAGES.projects} element={<Projects />} />
-        <Route path={PAGES.customers} element={<Customers />} />
-        <Route path={PAGES.contact} element={<Contact />} />
-        <Route path={PAGES.noMatch} element={<NoMatch />} />
+        <Route path={PAGES.home.link} element={<Home />} />
+        <Route path={PAGES.services.link} element={<Services />} />
+        <Route path={PAGES.projects.link} element={<Projects />} />
+        <Route path={PAGES.customers.link} element={<Customers />} />
+        <Route path={PAGES.contact.link} element={<Contact />} />
+        <Route path={PAGES.noMatch.link} element={<NoMatch />} />
       </Routes>
       <Footer />
     </Router>

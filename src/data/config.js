@@ -2,37 +2,43 @@ const config = {
   siteName: 'منحى',
   logoPath: '/src/assets/imgs/logo.png',
   pages: {
-    home: '/',
-    services: '/services',
-    projects: '/projects',
-    customers: '/customers',
-    contact: '/contact',
-    noMatch: '*'
-  },
-  headerMenu: {
+    home: {
+      title: 'الرئيسية',
+      link: '/'
+    },
     services: {
       title: 'خدماتنا',
-      link() {
-        return config.pages.services
-      }
+      link: '/services'
     },
     projects: {
       title: 'أعمالنا',
-      link() {
-        return config.pages.projects
-      }
+      link: '/projects'
     },
     customers: {
       title: 'عملائنا',
-      link() {
-        return config.pages.customers
-      }
+      link: '/customers'
     },
     contact: {
       title: 'تواصل معنا',
-      link() {
-        return config.pages.contact
-      }
+      link: '/contact'
+    },
+    noMatch: {
+      title: '404',
+      link: '*'
+    }
+  },
+  headerMenu: {
+    services: {
+      title() {return config.pages.services.title},
+      link() {return config.pages.services.link}
+    },
+    projects: {
+      title() {return config.pages.projects.title},
+      link() {return config.pages.projects.link}
+    },
+    customers: {
+      title() {return config.pages.customers.title},
+      link() {return config.pages.customers.link}
     },
   }
 }

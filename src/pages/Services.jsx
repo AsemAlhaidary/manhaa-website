@@ -3,7 +3,7 @@ import { config } from '../data'
 
 export default function Services() {
     useEffect(() => {
-        document.title = 'خدماتنا - ' + config.siteName
+        document.title = config.pages.services.title + ' - ' + config.siteName
     }, [])
 
     return (

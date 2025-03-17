@@ -6,7 +6,7 @@ export default function Header() {
     <header>
       <Logo />
       <HeaderMenu />
-      <Button text="تواصل معنا" variant="primary" action={config.pages.contact} />
+      <Button text={config.pages.contact.title} variant="primary" action={config.pages.contact.link} />
     </header>
   )
 }

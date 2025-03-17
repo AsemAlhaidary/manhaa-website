@@ -3,7 +3,7 @@ import { config } from '../data'
 
 export default function NoMatch() {
     useEffect(() => {
-        document.title = 'غير موجود - ' + config.siteName
+        document.title = config.pages.noMatch.title + ' - ' + config.siteName
     }, [])
 
     return (
