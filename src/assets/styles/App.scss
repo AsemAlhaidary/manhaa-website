@@ -1,6 +1,7 @@
-@use "./foundation/variables";
-@use "./foundation/palettes";
+// @use "./foundation/variables" as *;
+// @use "./foundation/palettes" as *;
+// @use "./foundation/mixins" as *;
 @use "./foundation/fonts";
-@use "./foundation/mixins";
 @use "./foundation/general";
 @use "./foundation/typography";
+@use "./components/header";

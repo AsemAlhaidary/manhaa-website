@@ -1,0 +1,60 @@
+@use "../foundation/variables" as *;
+@use "../foundation/palettes" as *;
+
+@mixin navbar-open {
+  .navbar-toggle {
+    span {
+      &:first-of-type {
+        transform: translate(-22%, 120%) rotate(-45deg) scaleX(0.7);
+      }
+
+      &:last-of-type {
+        transform: translate(-22%, -120%) rotate(45deg) scaleX(0.7);
+      }
+    }
+  }
+
+  .header-navbar-container {
+    transform: translateX(0);
+  }
+}
+
+@mixin container-shadow {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@mixin button {
+  padding: 4px 20px;
+  height: fit-content;
+  display: inline-block;
+  border-radius: 30px;
+  border: 1px solid $accent;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: center;
+}
+
+@mixin buttonPrimary {
+  @include button;
+  background-color: $accent;
+  color: #FFFFFF;
+
+  &:hover,
+  &:focus {
+    background-color: $hoverPrimaryColor;
+    border-color: $hoverPrimaryColor;
+  }
+}
+
+@mixin buttonSecondary {
+  @include button;
+  background-color: transparent;
+  color: $accent;
+
+  &:hover,
+  &:focus {
+    background-color: $hoverSecondaryColor;
+    border-color: $hoverPrimaryColor;
+    color: $hoverPrimaryColor;
+  }
+}

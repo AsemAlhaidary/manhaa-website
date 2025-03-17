@@ -1,5 +1,67 @@
+@use "../foundation/variables" as *;
+@use "../foundation/palettes" as *;
+@use "../foundation/mixins" as *;
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  --container-max-width: $sm-size;
+
+  @media screen and (min-width: #{$md-size}) {
+    --container-max-width: #{$md-size};
+  }
+
+  @media screen and (min-width: #{$lg-size}) {
+    --container-max-width: #{$lg-size};
+  }
+
+  @media screen and (min-width: #{$xl-size}) {
+    --container-max-width: #{$xl-size};
+  }
+
+  & {
+    --content-width: min(100%, var(--container-max-width, #{$xl-size}));
+  }
+}
+
+.controller {
+  display: none;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.row {
+  padding: 2rem 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  gap: 0.5rem;
+
+  &.mb {
+    @media screen and (min-width: #{$md-size}) {
+      display: none;
+    }
+  }
+}
+
+.btn,
+.btn-primary {
+  @include buttonPrimary;
+}
+
+.btn-secondary {
+  @include buttonSecondary;
 }

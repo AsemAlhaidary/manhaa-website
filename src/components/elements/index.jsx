@@ -1,9 +1,9 @@
 import Button from './Button'
 import Logo from './Logo'
-import HeaderMenu from './HeaderMenu'
+import HeaderNav from './HeaderNav'
 
 export {
   Button,
   Logo,
-  HeaderMenu
+  HeaderNav
 }
