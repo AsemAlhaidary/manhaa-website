@@ -19,10 +19,10 @@ export default function HeaderNav() {
               <NavLink
                 to={MENU[key].link()}
                 className={({ isActive }) =>
-                  `header-navbar-link${isActive ? ' active' : ''}`
+                  `header-navbar-link active-effect${isActive ? ' active' : ''}`
                 }
               >
-                {MENU[key].title}
+                <span className='navbar-link-text'>{MENU[key].title()}</span>
               </NavLink>
             </li>
           ))}

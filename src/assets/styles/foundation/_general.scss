@@ -95,3 +95,7 @@ body {
 .btn-secondary {
   @include buttonSecondary;
 }
+
+.active-effect {
+  @include activeEffect;
+}

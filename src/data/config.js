@@ -1,25 +1,26 @@
 const config = {
   siteName: 'منحى',
   logoPath: '/src/assets/imgs/logo.png',
+  activeIcon: '/src/assets/imgs/active-icon.png',
   pages: {
     home: {
       title: 'الرئيسية',
       link: '/'
     },
     services: {
-      title: 'خدماتنا',
+      title: 'خدماتنــا',
       link: '/services'
     },
     projects: {
-      title: 'أعمالنا',
+      title: 'أعمالنــا',
       link: '/projects'
     },
     customers: {
-      title: 'عملائنا',
+      title: 'عملائنــا',
       link: '/customers'
     },
     contact: {
-      title: 'تواصل معنا',
+      title: 'تواصل معنــا',
       link: '/contact'
     },
     noMatch: {

@@ -53,24 +53,23 @@
     gap: 0.5em;
 
     .header-navbar-item {
+      padding: 0.5em 1em;
       width: 100%;
       display: inline-block;
 
       .header-navbar-link {
-        padding: 0.5em 1em;
         width: max-content;
         display: inline-block;
-        font-size: 0.8em;
         color: $primaryText;
         border-radius: 5px;
         text-decoration: none;
 
-        &.active,
-        &:hover,
-        &:focus-within {
-          background-color: $darkGray;
-          color: #FFFFFF;
-        }
+        // &.active,
+        // &:hover,
+        // &:focus-within {
+        //   background-color: $darkGray;
+        //   color: #FFFFFF;
+        // }
       }
     }
   }
@@ -92,16 +91,16 @@
 
       .header-navbar-item {
         .header-navbar-link {
-
-          &:active,
-          &.active {
-            color: $accent;
-          }
+          // &.active,
+          // &:active,
+          // &:hover,
+          // &:focus {
+          //   color: $accent;
+          // }
 
           &:hover,
           &:focus {
             background-color: unset;
-            color: $accent;
           }
         }
       }
