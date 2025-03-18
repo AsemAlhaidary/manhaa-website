@@ -5,11 +5,11 @@
   .navbar-toggle {
     span {
       &:first-of-type {
-        transform: translate(-22%, 120%) rotate(-45deg) scaleX(0.7);
+        transform: translate(22%, 5px) rotate(45deg) scaleX(0.7);
       }
 
       &:last-of-type {
-        transform: translate(-22%, -120%) rotate(45deg) scaleX(0.7);
+        transform: translate(22%, -5px) rotate(-45deg) scaleX(0.7);
       }
     }
   }

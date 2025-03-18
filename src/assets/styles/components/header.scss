@@ -17,7 +17,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   cursor: pointer;
-  // border: 2px solid $accent;
   border-radius: 5px;
 
   span {
@@ -33,7 +32,7 @@
 .header-navbar-container {
   position: fixed;
   top: $header-height;
-  left: 0;
+  right: 0;
   padding: 2rem;
   min-width: 60%;
   height: calc(100vh - $header-height);
@@ -42,7 +41,7 @@
   align-items: flex-start;
   gap: 0.5rem;
   background-color: $transparentPrimary;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: $site-transition;
   @include container-shadow;
 
@@ -63,13 +62,6 @@
         color: $primaryText;
         border-radius: 5px;
         text-decoration: none;
-
-        // &.active,
-        // &:hover,
-        // &:focus-within {
-        //   background-color: $darkGray;
-        //   color: #FFFFFF;
-        // }
       }
     }
   }
@@ -91,13 +83,6 @@
 
       .header-navbar-item {
         .header-navbar-link {
-          // &.active,
-          // &:active,
-          // &:hover,
-          // &:focus {
-          //   color: $accent;
-          // }
-
           &:hover,
           &:focus {
             background-color: unset;
