@@ -26,7 +26,7 @@
     border: 2px solid $accent;
     border-radius: 2px;
     background-color: $accent;
-    transition: all $transition-duration ease-in-out;
+    transition: $site-transition;
   }
 }
 
@@ -43,7 +43,7 @@
   gap: 0.5rem;
   background-color: $transparentPrimary;
   transform: translateX(-100%);
-  transition: all $transition-duration ease-in-out;
+  transition: $site-transition;
   @include container-shadow;
 
   .header-navbar-list {
@@ -109,10 +109,20 @@
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 0.5rem 1rem;
   height: $header-height;
   background-color: $transparentPrimary;
+  transition: $site-transition;
+  z-index: 5;
   @include glassmorphism;
+
+  &.scroll {
+    @include container-shadow;
+  }
 
   .row {
     padding: 0;

@@ -7,5 +7,6 @@ $navbar-button-size: 40px;
 
 $header-height: 90px;
 $transition-duration: 200ms;
+$site-transition: all $transition-duration ease-in-out;
 
 $active-icon: url('/src/assets/imgs/active-icon.png');

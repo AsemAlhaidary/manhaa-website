@@ -32,7 +32,7 @@
   font-weight: normal;
   text-decoration: none;
   text-align: center;
-  transition: all $transition-duration ease-in-out;
+  transition: $site-transition;
   cursor: pointer;
 }
 
@@ -68,7 +68,7 @@
   > * {
     position: relative;
     display: inline-block;
-    transition: all $transition-duration ease-in-out;
+    transition: $site-transition;
     transform: translateY(0);
   }
 
@@ -83,7 +83,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all $transition-duration ease-in-out;
+    transition: $site-transition;
     transform: translateY(30px);
     opacity: 0;
   }
@@ -103,12 +103,8 @@
   }
 }
 
-@mixin glassmorphism($action: 'add') {
-  $value: unset;
-
-  @if $action == 'add' {
-    $value: blur(20px);
-  } @else if $action == 'remove' {
+@mixin glassmorphism($value: blur(20px), $action: 'add') {
+  @if $action == 'remove' {
     $value: unset;
   }
 

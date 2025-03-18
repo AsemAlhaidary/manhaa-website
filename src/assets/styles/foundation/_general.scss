@@ -11,6 +11,9 @@
 body {
   --container-max-width: $sm-size;
   background-color: $primary;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
 
   @media screen and (min-width: #{$md-size}) {
     --container-max-width: #{$md-size};
@@ -27,6 +30,16 @@ body {
   & {
     --content-width: min(100%, var(--container-max-width, #{$xl-size}));
   }
+}
+
+#root {
+  position: relative;
+}
+
+#site-container {
+  height: auto;
+  min-height: 100vh;
+  @include glassmorphism($value: blur(50px));
 }
 
 .controller {
