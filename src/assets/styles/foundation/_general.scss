@@ -46,17 +46,24 @@ body {
 }
 
 .container {
-  padding: 0 2rem;
+  position: relative;
+  padding: 0 $container-padding;
+  overflow: hidden;
 }
 
 .row {
   padding: 2rem 0;
+  width: 100%;
 }
 
 .wrapper {
   width: 100%;
   max-width: var(--content-width);
   margin: 0 auto;
+}
+
+.screen-height {
+  min-height: 100vh;
 }
 
 .flex {
@@ -111,4 +118,8 @@ body {
 
 .active-effect {
   @include activeEffect;
+}
+
+.text-right {
+  text-align: right;
 }

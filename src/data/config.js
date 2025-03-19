@@ -8,19 +8,19 @@ const config = {
       link: '/'
     },
     services: {
-      title: 'خدماتنــا',
+      title: 'خدماتنـــا',
       link: '/services'
     },
     projects: {
-      title: 'أعمالنــا',
+      title: 'أعمالنـــا',
       link: '/projects'
     },
     customers: {
-      title: 'عملائنــا',
+      title: 'عملائنـــا',
       link: '/customers'
     },
     contact: {
-      title: 'تواصل معنــا',
+      title: 'تواصل معنـــا',
       link: '/contact'
     },
     noMatch: {
@@ -41,6 +41,12 @@ const config = {
       title() {return config.pages.customers.title},
       link() {return config.pages.customers.link}
     },
+  },
+  siteContent: {
+    home: {
+      heroVideoSrc: '/src/assets/videos/home-hero.mp4',
+      heroVideoThumbnail: '/src/assets/imgs/home-thumbnail.jpg',
+    }
   }
 }
 

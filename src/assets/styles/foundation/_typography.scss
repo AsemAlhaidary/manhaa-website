@@ -1,3 +1,37 @@
+@use "../foundation/variables" as *;
+@use "../foundation/palettes" as *;
+
 body {
-  font-family: 'Fatimah';
+  font-family: Fatimah, Almarai;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  color: $primaryText;
+}
+
+h1,
+.h1 {
+  font-size: 5em;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1em;
 }
