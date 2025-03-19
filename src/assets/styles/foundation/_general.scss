@@ -116,10 +116,21 @@ body {
   @include buttonSecondary;
 }
 
-.active-effect {
-  @include activeEffect;
-}
-
 .text-right {
   text-align: right;
+}
+
+.card {
+  padding: 1rem;
+  @include card;
+  @include glassmorphism;
+}
+
+.fatha {
+  &-right {
+    @include fatha(right);
+  }
+  &-left {
+    @include fatha(left);
+  }
 }

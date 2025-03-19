@@ -56,12 +56,20 @@
       width: 100%;
       display: inline-block;
 
+      .active-effect {
+        @include activeEffect(5px);
+      }
+
       .header-navbar-link {
         width: max-content;
         display: inline-block;
         color: $primaryText;
         border-radius: 5px;
         text-decoration: none;
+
+        .navbar-link-text {
+          display: inline-block;
+        }
       }
     }
   }
