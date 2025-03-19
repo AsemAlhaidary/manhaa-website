@@ -9,7 +9,6 @@
   overflow: hidden;
 
   .row {
-    // $video-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,6 +41,8 @@
 
         .video {
           width: 100%;
+          object-fit: cover;
+          object-position: center;
         }
 
         .play-button {
@@ -65,6 +66,7 @@
     }
 
     @media screen and (min-width: #{$md-size}) {
+      $video-height: 50vh;
       flex-direction: row;
 
       .video-section {
@@ -74,6 +76,8 @@
         left: 0;
         transform: translateY(-50%);
         width: 70vw;
+        height: $video-height;
+        aspect-ratio: unset;
         z-index: -1;
 
         // .video-container {
