@@ -1,5 +1,4 @@
 @use "../foundation/variables" as *;
-@use "../foundation/palettes" as *;
 @use "../foundation/mixins" as *;
 
 .container.projects {
@@ -28,7 +27,7 @@
 
         hr {
           margin: 2rem var(--card-inner-gap);
-          border: 1px solid $accent;
+          border: 1px solid var(--accent);
           border-radius: 1px;
         }
       }

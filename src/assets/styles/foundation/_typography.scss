@@ -1,5 +1,4 @@
 @use "../foundation/variables" as *;
-@use "../foundation/palettes" as *;
 
 body {
   font-family: Fatimah, Almarai;
@@ -13,7 +12,7 @@ h5,
 h6,
 p,
 span {
-  color: $primaryText;
+  color: var(--primaryText);
 }
 
 .heading-font {

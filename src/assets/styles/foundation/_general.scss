@@ -1,5 +1,4 @@
 @use "../foundation/variables" as *;
-@use "../foundation/palettes" as *;
 @use "../foundation/mixins" as *;
 
 * {
@@ -10,7 +9,7 @@
 
 body {
   --container-max-width: $sm-size;
-  background-color: $primary;
+  background-color: var(--primary);
   width: 100%;
   max-width: 100vw;
 

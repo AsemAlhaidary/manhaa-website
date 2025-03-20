@@ -1,5 +1,4 @@
 @use "../foundation/variables" as *;
-@use "../foundation/palettes" as *;
 @use "../foundation/mixins" as *;
 
 #site-decorator {
@@ -18,7 +17,7 @@
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    background-color: $accent;
+    background-color: var(--accent);
 
     &:nth-of-type(1) {
       top: 0;

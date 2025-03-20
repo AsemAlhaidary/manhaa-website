@@ -1,11 +1,13 @@
-$accent: #007682;
-$primary: #0C1D25;
-$secondary: #FFFFFF;
-$primaryText: #FFFFFF;
-$secondaryText: #575757;
-$primaryTextVariant: #000000;
-$hoverPrimaryColor: #014c54;
-$hoverSecondaryColor: #d6d6d6;
-$transparentAccent: #00758292;
-$transparentPrimary: #0c1d25d1;
-$darkGray: #8b8b8b;
+:root {
+  --accent: #007682;
+  --primary: #0C1D25;
+  --secondary: #FFFFFF;
+  --primaryText: #FFFFFF;
+  --secondaryText: #575757;
+  --primaryTextVariant: #000000;
+  --hoverPrimaryColor: #014c54;
+  --hoverSecondaryColor: #d6d6d6;
+  --transparentAccent: #00758292;
+  --transparentPrimary: #0c1d25d1;
+  --darkGray: #8b8b8b;
+}

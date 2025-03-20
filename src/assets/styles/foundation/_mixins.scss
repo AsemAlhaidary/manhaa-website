@@ -1,5 +1,4 @@
 @use "../foundation/variables" as *;
-@use "../foundation/palettes" as *;
 
 @mixin navbar-open {
   .navbar-toggle {
@@ -28,7 +27,7 @@
   height: fit-content;
   display: inline-block;
   border-radius: 30px;
-  border: 1px solid $accent;
+  border: 1px solid var(--accent);
   font-weight: normal;
   text-decoration: none;
   text-align: center;
@@ -38,26 +37,26 @@
 
 @mixin buttonPrimary {
   @include button;
-  background-color: $accent;
+  background-color: var(--accent);
   color: #FFFFFF;
 
   &:hover,
   &:focus {
-    background-color: $hoverPrimaryColor;
-    border-color: $hoverPrimaryColor;
+    background-color: var(--hoverPrimaryColor);
+    border-color: var(--hoverPrimaryColor);
   }
 }
 
 @mixin buttonSecondary {
   @include button;
   background-color: transparent;
-  color: $accent;
+  color: var(--accent);
 
   &:hover,
   &:focus {
-    background-color: $hoverSecondaryColor;
-    border-color: $hoverPrimaryColor;
-    color: $hoverPrimaryColor;
+    background-color: var(--hoverSecondaryColor);
+    border-color: var(--hoverPrimaryColor);
+    color: var(--hoverPrimaryColor);
   }
 }
 
@@ -161,15 +160,15 @@
   width: fit-content;
   line-height: 1;
   font-size: 1rem;
-  color: $secondaryText;
-  background-color: $secondary;
+  color: var(--secondaryText);
+  background-color: var(--secondary);
   border: unset;
   border-radius: 3rem;
   cursor: pointer;
 
   &:focus,
   &:focus-within {
-    outline: 2px solid $accent;
+    outline: 2px solid var(--accent);
   }
 
   > * {
@@ -185,8 +184,8 @@
       margin-inline-end: 0.5rem;
       padding-inline-end: 0.5rem;
       display: inline-block;
-      color: $accent;
-      border-left: 1px solid $accent;
+      color: var(--accent);
+      border-left: 1px solid var(--accent);
     }
   }
 }
@@ -196,9 +195,9 @@
   display: inline-block;
   font-size: 0.8em;
   line-height: 1;
-  color: $primaryText;
+  color: var(--primaryText);
   text-decoration: none;
-  background-color: $primary;
+  background-color: var(--primary);
   border-radius: 2rem;
-  border: 1px solid $secondaryText;
+  border: 1px solid var(--secondaryText);
 }
