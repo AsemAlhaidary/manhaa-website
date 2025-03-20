@@ -47,7 +47,7 @@ body {
 
 .container {
   position: relative;
-  padding: 0 $container-padding;
+  padding: $container-paddingY $container-paddingX;
   overflow: hidden;
 }
 
@@ -133,4 +133,8 @@ body {
   &-left {
     @include fatha(left);
   }
+}
+
+.field {
+  @include field;
 }

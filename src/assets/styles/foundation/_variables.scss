@@ -5,9 +5,12 @@ $sm-size: 540px;
 
 $navbar-button-size: 40px;
 
-$container-padding: 2rem;
-
 $header-height: 90px;
+$container-paddingX: 2rem;
+$container-paddingY: ($header-height * 1.5);
+
+$card-border-radius: 50px;
+
 $transition-duration: 200ms;
 $site-transition: all $transition-duration ease-in-out;
 

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
+
 import { config } from '../data'
+import { SectionHeading } from '../components/elements'
 
 export default function Services() {
   const [selectedService, setSelectedService] = useState(null)
@@ -21,9 +23,7 @@ export default function Services() {
   return (
     <section className='container services'>
       <div className='row wrapper'>
-        <div className='col'>
-          <span role='heading' aria-level='1' className='h1'>خدماتنــا</span>
-        </div>
+        <SectionHeading title={config.pages.services.title} />
         <div className='col card card-active'>
           <ul className='services-list'>
             {services.map((service) => (

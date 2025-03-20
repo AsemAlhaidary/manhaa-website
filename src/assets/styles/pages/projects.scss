@@ -1,0 +1,37 @@
+@use "../foundation/variables" as *;
+@use "../foundation/palettes" as *;
+@use "../foundation/mixins" as *;
+
+.container.projects {
+  .row {
+    $elem-gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $elem-gap;
+
+    .col {
+      max-width: 100%;
+
+      .tools-sect {
+        margin-bottom: 2rem;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .projects-sect {
+        --card-inner-gap: 2rem;
+
+        hr {
+          margin: 2rem var(--card-inner-gap);
+          border: 1px solid $accent;
+          border-radius: 1px;
+        }
+      }
+    }
+  }
+}

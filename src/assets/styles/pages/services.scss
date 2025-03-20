@@ -3,8 +3,6 @@
 @use "../foundation/mixins" as *;
 
 .container.services {
-  padding-block: ($header-height * 1.5);
-
   .row {
     $elem-gap: 3rem;
     display: flex;
@@ -27,7 +25,7 @@
           gap: clamp(0.5rem, 1vw, 1rem);
 
           .active-effect {
-            @include activeEffect(clamp(30px, 8vw, 80px));
+            @include activeEffect(clamp(30px, 8vw, 100px));
           }
 
           .service-item {

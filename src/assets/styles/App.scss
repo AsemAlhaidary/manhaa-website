@@ -6,5 +6,7 @@
 @use "./foundation/typography";
 @use "./components/siteDecorator";
 @use "./components/header";
+@use "./components/projectCard";
 @use "./pages/home";
 @use "./pages/services";
+@use "./pages/projects";

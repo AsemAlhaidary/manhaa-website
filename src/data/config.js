@@ -74,6 +74,43 @@ const config = {
           icon: '/src/assets/imgs/media-consulting-on.png'
         },
       ]
+    },
+    projects: {
+      projects: [
+        {
+          title: 'نحلم ونحقق',
+          description: 'إعداد التوجه الاستراتيجي للخطة الإعلامية. إعداد البيانات الصحفية للجهات. كتابة وتحرير الأخبار الصحفية. نشر الأخبار في الوسائل الرسمية.',
+          thumbnail: '/src/assets/imgs/projects/project-1.jpg',
+          logo: '/src/assets/imgs/clients/2كورة.png',
+          categories: [
+            'فيديو',
+            'تصميم',
+            'صورة'
+          ]
+        },
+        {
+          title: 'نحلم ونحقق',
+          description: 'إعداد التوجه الاستراتيجي للخطة الإعلامية. إعداد البيانات الصحفية للجهات. كتابة وتحرير الأخبار الصحفية. نشر الأخبار في الوسائل الرسمية.',
+          thumbnail: '/src/assets/imgs/projects/project-1.jpg',
+          logo: '/src/assets/imgs/clients/2كورة.png',
+          categories: [
+            'فيديو',
+            'تصميم',
+            'صورة'
+          ]
+        },
+        {
+          title: 'نحلم ونحقق',
+          description: 'إعداد التوجه الاستراتيجي للخطة الإعلامية. إعداد البيانات الصحفية للجهات. كتابة وتحرير الأخبار الصحفية. نشر الأخبار في الوسائل الرسمية.',
+          thumbnail: '/src/assets/imgs/projects/project-1.jpg',
+          logo: '/src/assets/imgs/clients/2كورة.png',
+          categories: [
+            'فيديو',
+            'تصميم',
+            'صورة'
+          ]
+        },
+      ]
     }
   }
 }
