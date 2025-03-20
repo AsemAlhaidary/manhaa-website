@@ -13,6 +13,8 @@
 }
 
 html {
+  accent-color: var(--accent);
+
   &[data-theme="light"] {
     --primary: #FFFFFF;
     --secondary: #0C1D25;

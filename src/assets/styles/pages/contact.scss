@@ -1,0 +1,77 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
+.container.contact {
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .contact-container {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      .contact-info {
+        padding: 2rem 0 0;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+
+        .social-username {
+          direction: ltr;
+        }
+
+        .social-media-list {
+          display: flex;
+          gap: 0.5rem;
+
+          .social-link {
+            span {
+              color: var(--accent);
+            }
+          }
+        }
+      }
+
+      .contact-form {
+        form {
+          $form-gap: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: $form-gap;
+
+          .form-group {
+            display: flex;
+            align-items: center;
+            gap: $form-gap;
+
+            .field {
+              padding: 0.3rem 0.8rem;
+              width: 100%;
+              border-radius: 5px;
+
+              &::placeholder {
+                color: var(--secondaryText);
+                text-align: right;
+                font-family: Fatimah;
+                opacity: 0.6;
+              }
+
+              &.message {
+                height: 100px;
+                resize: none;
+              }
+            }
+          }
+
+          .btn {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

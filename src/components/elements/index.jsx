@@ -5,6 +5,7 @@ import SectionHeading from './SectionHeading'
 import CategoriesList from './CategoriesList'
 import Category from './Category'
 import CustomersSlider from './CustomersSlider'
+import ContactForm from './ContactForm'
 
 export {
   Button,
@@ -13,5 +14,6 @@ export {
   SectionHeading,
   CategoriesList,
   Category,
-  CustomersSlider
+  CustomersSlider,
+  ContactForm
 }

@@ -11,5 +11,5 @@ export {
     Footer,
     SiteDecorator,
     ProjectCard,
-    ProjectsSection
+    ProjectsSection,
 }

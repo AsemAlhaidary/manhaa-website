@@ -175,6 +175,47 @@ const config = {
           logo: '/src/assets/imgs/clients/هيئة المتاحف.png'
         },
       ]
+    },
+    contact: {
+      address: 'المملكة العربية السعودية - الرياض',
+      phone: '009665000000',
+      email: 'email@manhaa.com',
+      socialMedia: {
+        username: '@manhaa',
+        social: [
+          {
+            name: 'Instagram',
+            username: '@manhaa',
+            url: '',
+            icon: 'fa-brands fa-instagram'
+          },
+          {
+            name: 'Linked In',
+            username: '@manhaa',
+            url: '',
+            icon: 'fa-brands fa-linkedin'
+          },
+          {
+            name: 'X',
+            username: '@manhaa',
+            url: '',
+            icon: 'fa-brands fa-x-twitter'
+          },
+        ]
+      },
+      form: {
+        apiAccessKey: '9059985a-765e-4fb1-98dd-25ec346ee212',
+        name: 'الإسم',
+        phone: 'الهاتف',
+        email: 'البريد الإلكتروني',
+        message: 'الرسالة',
+        submit: 'تواصل معنا',
+        onSuccess: {
+          title: 'تم!',
+          text: 'لقد تم إرسال رسالتك بنجاح, سنرد عليك في اقرب وقت ممكن.',
+          icon: 'success'
+        }
+      }
     }
   }
 }
