@@ -1,6 +1,4 @@
-// @use "./foundation/variables" as *;
-// @use "./foundation/palettes" as *;
-// @use "./foundation/mixins" as *;
+@use "./foundation/palettes";
 @use "./foundation/fonts";
 @use "./foundation/general";
 @use "./foundation/typography";
@@ -10,3 +8,4 @@
 @use "./pages/home";
 @use "./pages/services";
 @use "./pages/projects";
+@use "./pages/customers";

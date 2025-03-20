@@ -11,3 +11,13 @@
   --transparentPrimary: #0c1d25d1;
   --darkGray: #8b8b8b;
 }
+
+html {
+  &[data-theme="light"] {
+    --primary: #FFFFFF;
+    --secondary: #0C1D25;
+    --primaryText: #000000;
+    --primaryTextVariant: #FFFFFF;
+    --transparentPrimary: #FFFFFFd1;
+  }
+}

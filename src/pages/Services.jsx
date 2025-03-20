@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { config } from '../data'
 import { SectionHeading } from '../components/elements'
 
-export default function Services() {
+export default function Services({ theme }) {
   const [selectedService, setSelectedService] = useState(null)
   const services = config.siteContent.services.services
 
@@ -14,7 +14,15 @@ export default function Services() {
     if (services.length > 0) {
       setSelectedService(services[0].id)
     }
-  }, [services])
+
+    const htmlElement = document.documentElement
+    htmlElement.setAttribute('data-theme', theme)
+
+    // Cleanup function to remove the data-theme attribute when the component unmounts
+    return () => {
+      htmlElement.removeAttribute('data-theme')
+    }
+  }, [theme, services])
 
   const handleServiceClick = (serviceId) => {
     setSelectedService(serviceId)

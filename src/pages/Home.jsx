@@ -1,13 +1,21 @@
 import { useEffect, useState, useRef } from 'react'
 import { config } from '../data'
 
-export default function Home() {
+export default function Home({ theme }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
     document.title = config.pages.home.title + ' - ' + config.siteName
-  }, [])
+
+    const htmlElement = document.documentElement
+    htmlElement.setAttribute('data-theme', theme)
+
+    // Cleanup function to remove the data-theme attribute when the component unmounts
+    return () => {
+      htmlElement.removeAttribute('data-theme')
+    }
+  }, [theme])
 
   const togglePlay = () => {
     if (videoRef.current.paused) {

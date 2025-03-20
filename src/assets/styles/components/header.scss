@@ -134,10 +134,16 @@ header {
     }
 
     img {
-      height: 50px;
+      height: 70px;
       object-fit: contain;
       object-position: center;
       filter: grayscale(100%) brightness(1000%) contrast(100%);
     }
+  }
+}
+
+html[data-theme="light"] {
+  header .logo-link img {
+    filter: unset;
   }
 }

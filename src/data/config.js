@@ -16,7 +16,7 @@ const config = {
       link: '/projects'
     },
     customers: {
-      title: 'عملائنـــا',
+      title: 'عملاؤنـــا',
       link: '/customers'
     },
     contact: {
@@ -109,6 +109,70 @@ const config = {
             'تصميم',
             'صورة'
           ]
+        },
+      ]
+    },
+    customers: {
+      customers: [
+        {
+          name: 'كورة',
+          logo: '/src/assets/imgs/clients/كورة.png'
+        },
+        {
+          name: 'Light Tea',
+          logo: '/src/assets/imgs/clients/light tea.png'
+        },
+        {
+          name: 'Tayyah',
+          logo: '/src/assets/imgs/clients/TAYYAH.png'
+        },
+        {
+          name: 'شعار',
+          logo: '/src/assets/imgs/clients/الشعار-مفرغ-بيج.png'
+        },
+        {
+          name: 'العراب',
+          logo: '/src/assets/imgs/clients/العراب.png'
+        },
+        {
+          name: 'اهداف',
+          logo: '/src/assets/imgs/clients/اهداف.png'
+        },
+        {
+          name: 'اوكازيون',
+          logo: '/src/assets/imgs/clients/اوكازيون.png'
+        },
+        {
+          name: 'الركن الجديد',
+          logo: '/src/assets/imgs/clients/شعار الركن الجديد (1).png'
+        },
+        {
+          name: 'صيحات',
+          logo: '/src/assets/imgs/clients/شعار-صيحات.png'
+        },
+        {
+          name: 'وزارة الشؤون البلدية',
+          logo: '/src/assets/imgs/clients/شعار_وزارة_الشؤون_البلدية.png'
+        },
+        {
+          name: 'شيغف',
+          logo: '/src/assets/imgs/clients/شيغف.png'
+        },
+        {
+          name: 'فيونا',
+          logo: '/src/assets/imgs/clients/فيونا.png'
+        },
+        {
+          name: 'الشعار',
+          logo: '/src/assets/imgs/clients/متسطيل 10000+500.png'
+        },
+        {
+          name: 'ممر',
+          logo: '/src/assets/imgs/clients/ممر.png'
+        },
+        {
+          name: 'هيئة المتاحف',
+          logo: '/src/assets/imgs/clients/هيئة المتاحف.png'
         },
       ]
     }

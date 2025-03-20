@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $xl-size: 1140px;
 $lg-size: 960px;
 $md-size: 720px;
@@ -14,6 +16,6 @@ $card-border-radius: 50px;
 $transition-duration: 200ms;
 $site-transition: all $transition-duration ease-in-out;
 
-$fatha-ratio: 317/116;
+$fatha-ratio: math.div(317, 116);
 $active-icon: url('/src/assets/imgs/active-icon.png');
 $fatha-image: url('/src/assets/imgs/header-img.png');

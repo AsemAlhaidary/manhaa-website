@@ -12,12 +12,12 @@ function App() {
       <Container>
         <Header />
         <Routes>
-          <Route path={PAGES.home.link} element={<Home />} />
-          <Route path={PAGES.services.link} element={<Services />} />
-          <Route path={PAGES.projects.link} element={<Projects />} />
-          <Route path={PAGES.customers.link} element={<Customers />} />
-          <Route path={PAGES.contact.link} element={<Contact />} />
-          <Route path={PAGES.noMatch.link} element={<NoMatch />} />
+          <Route path={PAGES.home.link} element={<Home theme='dark' />} />
+          <Route path={PAGES.services.link} element={<Services theme='dark' />} />
+          <Route path={PAGES.projects.link} element={<Projects theme='dark' />} />
+          <Route path={PAGES.customers.link} element={<Customers theme='light' />} />
+          <Route path={PAGES.contact.link} element={<Contact theme='dark' />} />
+          <Route path={PAGES.noMatch.link} element={<NoMatch theme='dark' />} />
         </Routes>
         <Footer />
       </Container>
