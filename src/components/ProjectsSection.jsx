@@ -1,14 +1,34 @@
 import { useState, useEffect, Fragment } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 import { ProjectCard } from '.'
 import { SearchField, SelectField } from './elements/form'
 import { config } from '../data'
 
 export default function ProjectsSection() {
+  const [searchParams, setSearchParams] = useSearchParams()
   const [categories, setCategories] = useState([])
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const projects = config.siteContent.projects.projects
+
+  // Handle URL parameters on load
+  useEffect(() => {
+    const urlCategory = searchParams.get('category')
+    if (urlCategory && categories.includes(urlCategory)) {
+      setSelectedCategory(urlCategory)
+    }
+  }, [categories, searchParams])
+
+  // Update URL when category changes
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category)
+    const newSearchParams = new URLSearchParams(searchParams)
+    category === 'all' 
+      ? newSearchParams.delete('category')
+      : newSearchParams.set('category', category)
+    setSearchParams(newSearchParams)
+  }
 
   useEffect(() => {
     const allCategories = projects.flatMap((project) => project.categories)
@@ -39,7 +59,7 @@ export default function ProjectsSection() {
           items={categories}
           defaultItem='النوع'
           value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
+          onChange={(e) => handleCategoryChange(e.target.value)}
         />
       </div>
       <div className='projects-sect'>
