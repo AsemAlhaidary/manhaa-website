@@ -1,5 +1,12 @@
 import './assets/styles/App.scss'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import { useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from
+  'react-router-dom'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 import { Home, Services, Projects, Project, Customers, Contact, NoMatch } from './pages'
 import { Container, Header, Footer, SiteDecorator } from './components'
 import { config } from './data'
@@ -7,6 +14,15 @@ import { config } from './data'
 const PAGES = config.pages
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true, // Animation only once
+      offset: 200, // Start animation when element is 200px below viewport
+      easing: 'ease-in-out',
+    });
+  }, []);
+
   return (
     <Router>
       <Container>

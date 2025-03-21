@@ -1,6 +1,11 @@
 export default function SearchField({ value, onChange }) {
   return (
-    <label className='field icon-field' htmlFor='search-projects'>
+    <label
+      data-aos='fade-up'
+      data-aos-delay='200'
+      className='field icon-field'
+      htmlFor='search-projects'
+    >
       <i className='fa-solid fa-magnifying-glass icon'></i>
       <input 
         id='search-projects' 

@@ -11,7 +11,11 @@ export default function CustomersSlider() {
   const customers = config.siteContent.customers.customers
 
   return (
-    <div className='customers-slider'>
+    <div
+      data-aos='fade-up'
+      data-aos-delay='200'
+      className='customers-slider'
+    >
       <Swiper
         modules={[Navigation, Pagination, Autoplay]} // Add required modules
         spaceBetween={30} // Space between slides

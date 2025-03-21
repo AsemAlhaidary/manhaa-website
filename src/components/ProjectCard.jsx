@@ -8,7 +8,11 @@ export default function ProjectCard({ project, className }) {
   const projectId = encodeURIComponent(project.title)
 
   return (
-    <div className={`card project-card${className}`}>
+    <div
+      data-aos='fade-up'
+      data-aos-delay='200'
+      className={`card project-card${className}`}
+    >
       <div className='details-sect'>
         <img className='logo' src={project.logo} alt={project.title} title={project.title} loading='lazy' />
         <span role='heading' aria-level='4' className='h4 heading-font'>{project.title}</span>

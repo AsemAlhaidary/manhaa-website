@@ -31,7 +31,13 @@ export default function Home({ theme }) {
     <section className='container home screen-height'>
       <div className='row wrapper'>
         <div className='col'>
-          <span role='heading' aria-level='1' className='h1 text-right'>
+          <span
+            data-aos='fade-up'
+            data-aos-delay='200'
+            role='heading'
+            aria-level='1'
+            className='h1 text-right'
+          >
             نأخذك لمنحى<br />
             آخــــــــــــــــر
           </span>

@@ -21,7 +21,11 @@ export default function Contact({ theme }) {
 
   return (
     <section className='container contact'>
-      <div className='row wrapper'>
+      <div
+        data-aos='fade-up'
+        data-aos-delay='200'
+        className='row wrapper'
+      >
         <SectionHeading title={config.pages.contact.title} />
         <div className='col'>
           <div className='contact-container flex'>

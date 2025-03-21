@@ -32,7 +32,11 @@ export default function Services({ theme }) {
     <section className='container services'>
       <div className='row wrapper'>
         <SectionHeading title={config.pages.services.title} />
-        <div className='col card card-active'>
+        <div
+          data-aos='fade-up'
+          data-aos-delay='200'
+          className='col card card-active'
+        >
           <ul className='services-list'>
             {services.map((service) => (
               <li
@@ -57,8 +61,12 @@ export default function Services({ theme }) {
             key={service.id}
             className={`col service-details${selectedService === service.id ? ' active' : ''}`}
           >
-            <span role='heading' aria-level='1' className='h1 heading-font'>{service.title}</span>
-            <p className='description content-font'>{service.description}</p>
+            <SectionHeading title={service.title} />
+            <p
+              data-aos='fade-up'
+              data-aos-delay='200'
+              className='description content-font'
+            >{service.description}</p>
           </div>
         ))}
       </div>

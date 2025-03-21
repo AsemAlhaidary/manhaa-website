@@ -27,14 +27,22 @@ export default function Project({ theme }) {
   return (
     <section className='container project'>
       <div className='row wrapper'>
-        <div className='col project-headlines'>
+        <div
+          data-aos='fade-up'
+          data-aos-delay='200'
+          className='col project-headlines'
+        >
           <div className='project-text'>
             <span role='heading' aria-level='6' className='h6 heading-font'>{project.customer}</span>
             <span role='heading' aria-level='2' className='h2 heading-font'>{project.title}</span>
           </div>
           <CategoriesList categories={project.categories} />
         </div>
-        <div className='col img-sect'>
+        <div
+          data-aos='fade-up'
+          data-aos-delay='200'
+          className='col img-sect'
+        >
           <img
             src={project.thumbnail}
             alt={project.title}
@@ -42,7 +50,11 @@ export default function Project({ theme }) {
             loading='lazy'
           />
         </div>
-        <div className='col details-sect'>
+        <div
+          data-aos='fade-up'
+          data-aos-delay='200'
+          className='col details-sect'
+        >
           <div className='project-details'>
             <span role='heading' aria-level='6' className='h6 heading-font'>{project.title}</span>
             <span role='heading' aria-level='2' className='h2 heading-font'>{project.title}</span>
@@ -56,10 +68,18 @@ export default function Project({ theme }) {
             />
           </div>
         </div>
-        <div className='col'>
+        <div
+          data-aos='fade-up'
+          data-aos-delay='200'
+          className='col'
+        >
           <p className='details-text content-font'>{project.description}</p>
         </div>
-        <div className='col'>
+        <div
+          data-aos='fade-up'
+          data-aos-delay='200'
+          className='col'
+        >
           <Button
             text="رجوع إلى المشاريع"
             variant="primary"
