@@ -129,10 +129,26 @@ body {
   @include glassmorphism;
 }
 
+.categories {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  .category {
+    list-style-type: none;
+
+    a {
+      @include category;
+    }
+  }
+}
+
 .fatha {
   &-right {
     @include fatha(right);
   }
+
   &-left {
     @include fatha(left);
   }

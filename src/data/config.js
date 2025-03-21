@@ -87,6 +87,7 @@ const config = {
           description: 'إعداد التوجه الاستراتيجي للخطة الإعلامية. إعداد البيانات الصحفية للجهات. كتابة وتحرير الأخبار الصحفية. نشر الأخبار في الوسائل الرسمية.',
           thumbnail: '/src/assets/imgs/projects/project-1.jpg',
           logo: '/src/assets/imgs/clients/2كورة.png',
+          customer: 'المركز السعودي للأعمال',
           categories: [
             'فيديو',
             'تصميم',
@@ -98,6 +99,7 @@ const config = {
           description: 'إعداد التوجه الاستراتيجي للخطة الإعلامية. إعداد البيانات الصحفية للجهات. كتابة وتحرير الأخبار الصحفية. نشر الأخبار في الوسائل الرسمية.',
           thumbnail: '/src/assets/imgs/projects/project-1.jpg',
           logo: '/src/assets/imgs/clients/2كورة.png',
+          customer: 'المركز السعودي للأعمال',
           categories: [
             'فيديو',
             'تصميم',
@@ -109,6 +111,7 @@ const config = {
           description: 'إعداد التوجه الاستراتيجي للخطة الإعلامية. إعداد البيانات الصحفية للجهات. كتابة وتحرير الأخبار الصحفية. نشر الأخبار في الوسائل الرسمية.',
           thumbnail: '/src/assets/imgs/projects/project-1.jpg',
           logo: '/src/assets/imgs/clients/2كورة.png',
+          customer: 'المركز السعودي للأعمال',
           categories: [
             'فيديو',
             'تصميم',

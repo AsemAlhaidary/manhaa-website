@@ -1,32 +1,32 @@
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect, Fragment } from 'react'
 
 import { ProjectCard } from '.'
 import { SearchField, SelectField } from './elements/form'
 import { config } from '../data'
 
 export default function ProjectsSection() {
-  const [categories, setCategories] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [categories, setCategories] = useState([])
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const projects = config.siteContent.projects.projects
 
   useEffect(() => {
-    const allCategories = projects.flatMap((project) => project.categories);
-    const uniqueCategories = [...new Set(allCategories)];
-    setCategories(uniqueCategories);
-  }, [projects]);
+    const allCategories = projects.flatMap((project) => project.categories)
+    const uniqueCategories = [...new Set(allCategories)]
+    setCategories(uniqueCategories)
+  }, [projects])
 
   const filteredProjects = projects.filter(project => {
-    const lowerCaseQuery = searchQuery.toLowerCase();
+    const lowerCaseQuery = searchQuery.toLowerCase()
     const matchesSearch = 
       project.title.toLowerCase().includes(lowerCaseQuery) ||
-      project.description.toLowerCase().includes(lowerCaseQuery);
+      project.description.toLowerCase().includes(lowerCaseQuery)
       
     const matchesCategory = selectedCategory === 'all' || 
-      project.categories.includes(selectedCategory);
+      project.categories.includes(selectedCategory)
       
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory
+  })
 
   return (
     <div className='col projects-sect-container'>
