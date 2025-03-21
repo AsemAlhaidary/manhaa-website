@@ -7,15 +7,28 @@
   width: 100%;
   max-width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: $card-gap;
 
-  &.reverse {
-    flex-direction: row-reverse;
+  @media screen and (min-width: #{$md-size}) {
+    flex-direction: row;
+    align-items: center;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .img-sect {
+      width: 60%;
+    }
+
+    .details-sect {
+      width: 40%;
+    }
   }
 
   .details-sect {
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -31,7 +44,7 @@
   }
 
   .img-sect {
-    width: 60%;
+    width: 100%;
     display: flex;
     overflow: hidden;
 
