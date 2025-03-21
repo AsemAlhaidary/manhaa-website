@@ -1,8 +1,6 @@
 import { useState } from 'react'
-
 import Swal from 'sweetalert2'
 import { useConfig } from '../ConfigLoader'
-// import { config } from '../../data'
 
 export default function ContactForm() {
   const { config, loading, error } = useConfig()
@@ -40,6 +38,11 @@ export default function ContactForm() {
       })
       event.target.reset()
     } else {
+      Swal.fire({
+        title: 'خطأ!',
+        text: 'حدث خطأ أثناء الإرسال',
+        icon: 'error'
+      })
       setResult(data.message)
       console.log('Error', result)
     }

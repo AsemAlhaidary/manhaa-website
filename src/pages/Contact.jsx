@@ -1,26 +1,9 @@
-import { useEffect } from 'react'
-
-// import { config } from '../data'
 import { SectionHeading } from '../components/elements'
 import { ContactForm } from '../components/elements'
 import { useConfig } from '../components/ConfigLoader'
 
-export default function Contact({ theme }) {
+export default function Contact() {
   const { config, loading, error } = useConfig()
-
-  useEffect(() => {
-    if (!config) return
-
-    document.title = config.pages.contact.title + ' - ' + config.siteName
-
-    const htmlElement = document.documentElement
-    htmlElement.setAttribute('data-theme', theme)
-
-    // Cleanup function to remove the data-theme attribute when the component unmounts
-    return () => {
-      htmlElement.removeAttribute('data-theme')
-    }
-  }, [theme, config])
 
   if (loading) {
     return null
@@ -31,7 +14,7 @@ export default function Contact({ theme }) {
   const socialMedia = config.siteContent.contact.socialMedia
 
   return (
-    <section className='container contact decorator-top-right'>
+    <section id='contact-us' className='container contact decorator-top-right'>
       <div
         data-aos='fade-up'
         data-aos-delay='200'

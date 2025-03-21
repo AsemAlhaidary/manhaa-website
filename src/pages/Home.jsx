@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { useConfig } from '../components/ConfigLoader'
-// import { config } from '../data'
+import { Contact } from '.'
 
 export default function Home({ theme }) {
   const { config, loading, error } = useConfig()
@@ -40,31 +40,34 @@ export default function Home({ theme }) {
   };
 
   return (
-    <section className='container home screen-height decorator-top-left decorator-bottom-right'>
-      <div className='row wrapper'>
-        <div className='col'>
-          <span
-            data-aos='fade-up'
-            data-aos-delay='200'
-            role='heading'
-            aria-level='1'
-            className='h1 text-right'
-          >
-            نأخذك لمنحى<br />
-            آخــــــــــــــــر
-          </span>
-        </div>
-        <div className='col video-section'>
-          <div className='video-container'>
-            <video ref={videoRef} className='video' onClick={togglePlay} poster={config.siteContent.home.heroVideoThumbnail}>
-              <source src={config.siteContent.home.heroVideoSrc} type='video/mp4' />
-            </video>
-            {!isPlaying && (
-              <button className='play-button' onClick={togglePlay}></button>
-            )}
+    <>
+      <section className='container home screen-height decorator-top-left decorator-bottom-right'>
+        <div className='row wrapper'>
+          <div className='col'>
+            <span
+              data-aos='fade-up'
+              data-aos-delay='200'
+              role='heading'
+              aria-level='1'
+              className='h1 text-right'
+            >
+              نأخذك لمنحى<br />
+              آخــــــــــــــــر
+            </span>
+          </div>
+          <div className='col video-section'>
+            <div className='video-container'>
+              <video ref={videoRef} className='video' onClick={togglePlay} poster={config.siteContent.home.heroVideoThumbnail}>
+                <source src={config.siteContent.home.heroVideoSrc} type='video/mp4' />
+              </video>
+              {!isPlaying && (
+                <button className='play-button' onClick={togglePlay}></button>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <Contact />
+    </>
   );
 }
