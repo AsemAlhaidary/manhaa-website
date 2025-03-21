@@ -16,6 +16,10 @@ const config = {
       title: 'أعمالنـــا',
       link: '/projects'
     },
+    project: {
+      title: 'مشروع',
+      link: '/project'
+    },
     customers: {
       title: 'عملاؤنـــا',
       link: '/customers'

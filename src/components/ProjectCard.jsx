@@ -1,6 +1,12 @@
+import { Link } from 'react-router-dom'
+
 import { CategoriesList } from './elements'
+import { config } from '../data'
 
 export default function ProjectCard({ project, className }) {
+  // Create URL-friendly ID
+  const projectId = encodeURIComponent(project.title)
+
   return (
     <div className={`card project-card${className}`}>
       <div className='details-sect'>
@@ -9,9 +15,14 @@ export default function ProjectCard({ project, className }) {
         <CategoriesList categories={project.categories} />
       </div>
       <div className='img-sect'>
-        <a href='#'>
-          <img className='thumbnail' src={project.thumbnail} alt={project.title} loading='lazy' />
-        </a>
+        <Link to={`${config.pages.project.link}/${projectId}`}>
+          <img 
+            className='thumbnail' 
+            src={project.thumbnail} 
+            alt={project.title} 
+            loading='lazy' 
+          />
+        </Link>
       </div>
     </div>
   )
