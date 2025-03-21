@@ -30,7 +30,7 @@ export default function Projects({ theme }) {
   }
 
   return (
-    <section className='container projects'>
+    <section className='container projects decorator-top-right decorator-bottom-left'>
       <div className='row wrapper'>
         <SectionHeading title={config.pages.projects.title} />
         <ProjectsSection />

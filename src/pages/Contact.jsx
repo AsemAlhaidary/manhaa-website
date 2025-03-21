@@ -31,7 +31,7 @@ export default function Contact({ theme }) {
   const socialMedia = config.siteContent.contact.socialMedia
 
   return (
-    <section className='container contact'>
+    <section className='container contact decorator-top-right'>
       <div
         data-aos='fade-up'
         data-aos-delay='200'

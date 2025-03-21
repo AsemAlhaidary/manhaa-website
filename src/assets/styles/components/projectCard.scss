@@ -10,6 +10,10 @@
   align-items: center;
   gap: $card-gap;
 
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+
   .details-sect {
     width: 40%;
     display: flex;

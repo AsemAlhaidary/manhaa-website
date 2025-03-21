@@ -38,6 +38,53 @@ body {
   position: relative;
   padding: $container-paddingY $container-paddingX;
   overflow: hidden;
+  background-color: transparent;
+}
+
+.decorator {
+  &-top {
+    &-right {
+      &::before {
+        content: '';
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        @include decorator;
+      }
+    }
+
+    &-left {
+      &::before {
+        content: '';
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        @include decorator;
+      }
+    }
+  }
+
+  &-bottom {
+    &-right {
+      &::after {
+        content: '';
+        bottom: 0;
+        right: 0;
+        transform: translate(50%, 50%);
+        @include decorator;
+      }
+    }
+
+    &-left {
+      &::after {
+        content: '';
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, 50%);
+        @include decorator;
+      }
+    }
+  }
 }
 
 .row {

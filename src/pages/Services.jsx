@@ -46,7 +46,7 @@ export default function Services({ theme }) {
   }
 
   return (
-    <section className='container services'>
+    <section className='container services decorator-top-right decorator-bottom-left'>
       <div className='row wrapper'>
         <SectionHeading title={config.pages.services.title} />
         <div

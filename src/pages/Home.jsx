@@ -40,7 +40,7 @@ export default function Home({ theme }) {
   };
 
   return (
-    <section className='container home screen-height'>
+    <section className='container home screen-height decorator-top-left decorator-bottom-right'>
       <div className='row wrapper'>
         <div className='col'>
           <span

@@ -200,3 +200,13 @@
   border-radius: 2rem;
   border: 1px solid var(--secondaryText);
 }
+
+@mixin decorator {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  filter: blur(150px);
+  z-index: -1;
+}

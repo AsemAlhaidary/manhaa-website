@@ -36,7 +36,7 @@ export default function Project({ theme }) {
   if (!project) return <div>هذا المشروع غير موجود</div>
 
   return (
-    <section className='container project'>
+    <section className='container project decorator-top-right decorator-bottom-left'>
       <div className='row wrapper'>
         <div
           data-aos='fade-up'
