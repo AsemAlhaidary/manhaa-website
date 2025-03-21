@@ -1,8 +1,13 @@
 import { useEffect } from 'react'
-import { config } from '../data'
+import { useConfig } from '../components/ConfigLoader'
+// import { config } from '../data'
 
 export default function NoMatch({ theme }) {
+  const { config, loading, error } = useConfig()
+
   useEffect(() => {
+    if (!config) return
+
     document.title = config.pages.noMatch.title + ' - ' + config.siteName
 
     const htmlElement = document.documentElement
@@ -12,7 +17,14 @@ export default function NoMatch({ theme }) {
     return () => {
       htmlElement.removeAttribute('data-theme')
     }
-  }, [theme])
+  }, [theme, config])
+
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
 
   return (
     <h1>NoMatch</h1>

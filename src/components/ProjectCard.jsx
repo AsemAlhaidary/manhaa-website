@@ -1,9 +1,18 @@
 import { Link } from 'react-router-dom'
 
 import { CategoriesList } from './elements'
-import { config } from '../data'
+import { useConfig } from './ConfigLoader'
+// import { config } from '../data'
 
 export default function ProjectCard({ project, className }) {
+  const { config, loading, error } = useConfig()
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
+
   // Create URL-friendly ID
   const projectId = encodeURIComponent(project.title)
 

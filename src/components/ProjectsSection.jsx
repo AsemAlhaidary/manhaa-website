@@ -1,18 +1,30 @@
-import { useState, useEffect, Fragment } from 'react'
+import { useState, useEffect, Fragment, useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
-
 import { ProjectCard } from '.'
 import { SearchField, SelectField } from './elements/form'
-import { config } from '../data'
+import { useConfig } from './ConfigLoader'
 
 export default function ProjectsSection() {
+  const { config, loading, error } = useConfig()
   const [searchParams, setSearchParams] = useSearchParams()
   const [categories, setCategories] = useState([])
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
-  const projects = config.siteContent.projects.projects
 
-  // Handle URL parameters on load
+  // Initialize projects with safe optional chaining
+  const projects = useMemo(
+    () => config?.siteContent?.projects?.projects || [],
+    [config?.siteContent?.projects?.projects]
+  )
+
+  // Calculate categories when projects change
+  useEffect(() => {
+    const allCategories = projects.flatMap((project) => project.categories)
+    const uniqueCategories = [...new Set(allCategories)]
+    setCategories(uniqueCategories)
+  }, [projects])
+
+  // Handle URL parameters after categories are loaded
   useEffect(() => {
     const urlCategory = searchParams.get('category')
     if (urlCategory && categories.includes(urlCategory)) {
@@ -20,33 +32,32 @@ export default function ProjectsSection() {
     }
   }, [categories, searchParams])
 
-  // Update URL when category changes
   const handleCategoryChange = (category) => {
     setSelectedCategory(category)
     const newSearchParams = new URLSearchParams(searchParams)
-    category === 'all' 
+    category === 'all'
       ? newSearchParams.delete('category')
       : newSearchParams.set('category', category)
     setSearchParams(newSearchParams)
   }
 
-  useEffect(() => {
-    const allCategories = projects.flatMap((project) => project.categories)
-    const uniqueCategories = [...new Set(allCategories)]
-    setCategories(uniqueCategories)
-  }, [projects])
+  const filteredProjects = useMemo(() =>
+    projects.filter(project => {
+      const lowerCaseQuery = searchQuery.toLowerCase()
+      const matchesSearch =
+        project.title.toLowerCase().includes(lowerCaseQuery) ||
+        project.description.toLowerCase().includes(lowerCaseQuery)
 
-  const filteredProjects = projects.filter(project => {
-    const lowerCaseQuery = searchQuery.toLowerCase()
-    const matchesSearch = 
-      project.title.toLowerCase().includes(lowerCaseQuery) ||
-      project.description.toLowerCase().includes(lowerCaseQuery)
-      
-    const matchesCategory = selectedCategory === 'all' || 
-      project.categories.includes(selectedCategory)
-      
-    return matchesSearch && matchesCategory
-  })
+      const matchesCategory = selectedCategory === 'all' ||
+        project.categories.includes(selectedCategory)
+
+      return matchesSearch && matchesCategory
+    }),
+    [projects, searchQuery, selectedCategory]
+  )
+
+  if (loading) return null
+  if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
 
   return (
     <div className='col projects-sect-container'>

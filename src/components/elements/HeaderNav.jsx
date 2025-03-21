@@ -1,9 +1,19 @@
 import { NavLink } from 'react-router-dom'
-import { config } from '../../data'
 
-const MENU = config.headerMenu
+import { useConfig } from '../ConfigLoader'
+// import { config } from '../../data'
 
 export default function HeaderNav() {
+  const { config, loading, error } = useConfig()
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
+
+  const MENU = config.headerMenu
+
   return (
     <nav className='header-menu-container order-0 mb'>
       <input type='checkbox' name='open-navbar' id='open-navbar' className='controller' />

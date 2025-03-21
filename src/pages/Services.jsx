@@ -1,19 +1,29 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 
-import { config } from '../data'
 import { SectionHeading } from '../components/elements'
+import { useConfig } from '../components/ConfigLoader'
 
 export default function Services({ theme }) {
+  const { config, loading, error } = useConfig()
   const [selectedService, setSelectedService] = useState(null)
-  const services = config.siteContent.services.services
 
+  // Memoize services array to prevent unnecessary recalculations
+  const services = useMemo(() =>
+    config?.siteContent?.services?.services || [],
+    [config?.siteContent?.services?.services] // Only update when services data changes
+  )
+
+  // Service selection effect
   useEffect(() => {
-    document.title = config.pages.services.title + ' - ' + config.siteName
-
-    // Set initial selected service
     if (services.length > 0) {
       setSelectedService(services[0].id)
     }
+  }, [services])
+
+  useEffect(() => {
+    if (!config) return
+
+    document.title = config.pages.services.title + ' - ' + config.siteName
 
     const htmlElement = document.documentElement
     htmlElement.setAttribute('data-theme', theme)
@@ -22,7 +32,14 @@ export default function Services({ theme }) {
     return () => {
       htmlElement.removeAttribute('data-theme')
     }
-  }, [theme, services])
+  }, [theme, config])
+
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
 
   const handleServiceClick = (serviceId) => {
     setSelectedService(serviceId)

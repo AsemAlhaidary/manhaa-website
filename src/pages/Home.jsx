@@ -1,11 +1,16 @@
 import { useEffect, useState, useRef } from 'react'
-import { config } from '../data'
+import { useConfig } from '../components/ConfigLoader'
+// import { config } from '../data'
 
 export default function Home({ theme }) {
+  const { config, loading, error } = useConfig()
+
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
+    if (!config) return
+
     document.title = config.pages.home.title + ' - ' + config.siteName
 
     const htmlElement = document.documentElement
@@ -15,7 +20,14 @@ export default function Home({ theme }) {
     return () => {
       htmlElement.removeAttribute('data-theme')
     }
-  }, [theme])
+  }, [theme, config])
+
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
 
   const togglePlay = () => {
     if (videoRef.current.paused) {

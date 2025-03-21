@@ -1,9 +1,18 @@
 import React from 'react'
 
-import { config } from '../data'
+// import { config } from '../data'
 import { Logo } from './elements'
+import { useConfig } from './ConfigLoader'
 
 export default function Footer() {
+  const { config, loading, error } = useConfig()
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
+
   const socialMedia = config.siteContent.contact.socialMedia
 
   return (

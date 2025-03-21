@@ -5,9 +5,19 @@ import 'swiper/css/navigation' // Navigation module styles
 import 'swiper/css/pagination' // Pagination module styles
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 
-import { config } from '../../data'
+import { useConfig } from '../ConfigLoader'
+// import { config } from '../../data'
 
 export default function CustomersSlider() {
+  const { config, loading, error } = useConfig()
+
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
+
   const customers = config.siteContent.customers.customers
 
   return (

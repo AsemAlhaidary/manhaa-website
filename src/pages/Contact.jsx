@@ -1,13 +1,16 @@
 import { useEffect } from 'react'
 
-import { config } from '../data'
+// import { config } from '../data'
 import { SectionHeading } from '../components/elements'
 import { ContactForm } from '../components/elements'
+import { useConfig } from '../components/ConfigLoader'
 
 export default function Contact({ theme }) {
-  const socialMedia = config.siteContent.contact.socialMedia
+  const { config, loading, error } = useConfig()
 
   useEffect(() => {
+    if (!config) return
+
     document.title = config.pages.contact.title + ' - ' + config.siteName
 
     const htmlElement = document.documentElement
@@ -17,7 +20,15 @@ export default function Contact({ theme }) {
     return () => {
       htmlElement.removeAttribute('data-theme')
     }
-  }, [theme])
+  }, [theme, config])
+
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
+  const socialMedia = config.siteContent.contact.socialMedia
 
   return (
     <section className='container contact'>

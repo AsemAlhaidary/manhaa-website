@@ -1,7 +1,16 @@
 import { Logo, HeaderNav, Button } from './elements'
-import config from '../data/config'
+import { useConfig } from './ConfigLoader'
+// import config from '../data/config'
 
 export default function Header() {
+  const { config, loading, error } = useConfig()
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
+
   return (
     <header>
       <div className='row wrapper'>

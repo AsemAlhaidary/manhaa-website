@@ -1,11 +1,21 @@
-import React from 'react'
+import { useState } from 'react'
 
-import { config } from '../../data'
 import Swal from 'sweetalert2'
+import { useConfig } from '../ConfigLoader'
+// import { config } from '../../data'
 
 export default function ContactForm() {
+  const { config, loading, error } = useConfig()
+
+  const [result, setResult] = useState('')
+
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
   const form = config.siteContent.contact.form
-  const [result, setResult] = React.useState('')
 
   const onSubmit = async (event) => {
     event.preventDefault()

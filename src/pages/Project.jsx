@@ -1,16 +1,20 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { useParams } from 'react-router-dom'
-
-import { config } from '../data'
 import { Button, CategoriesList } from '../components/elements'
+import { useConfig } from '../components/ConfigLoader'
 
 export default function Project({ theme }) {
+  const { config, loading, error } = useConfig()
   const { projectId } = useParams()
-  const project = config.siteContent.projects.projects.find(
-    p => p.title === decodeURIComponent(projectId)
-  )
+
+  const project = useMemo(() =>
+    config?.siteContent?.projects?.projects.find(
+      p => p.title === decodeURIComponent(projectId)
+    ) || null, [config?.siteContent?.projects?.projects, projectId])
 
   useEffect(() => {
+    if (!config) return
+
     document.title = (project) ? project.title : config.pages.noMatch.title + ' - ' + config.siteName
 
     const htmlElement = document.documentElement
@@ -20,7 +24,14 @@ export default function Project({ theme }) {
     return () => {
       htmlElement.removeAttribute('data-theme')
     }
-  }, [theme, project])
+  }, [theme, project, config])
+
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
 
   if (!project) return <div>هذا المشروع غير موجود</div>
 

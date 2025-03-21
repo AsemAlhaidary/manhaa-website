@@ -1,7 +1,17 @@
 import { NavLink } from 'react-router-dom'
-import { config } from '../../data'
+
+import { useConfig } from '../ConfigLoader'
+// import { config } from '../../data'
 
 export default function Logo() {
+  const { config, loading, error } = useConfig()
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
+
   return (
     <NavLink
       to={config.pages.home.link}

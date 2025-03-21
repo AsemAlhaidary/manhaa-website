@@ -9,19 +9,31 @@ import 'aos/dist/aos.css'
 
 import { Home, Services, Projects, Project, Customers, Contact, NoMatch } from './pages'
 import { Container, Header, Footer, SiteDecorator } from './components'
-import { config } from './data'
-
-const PAGES = config.pages
+import { useConfig } from './components/ConfigLoader'
+// import { config } from './data'
 
 function App() {
+  const { config, loading, error } = useConfig()
+
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true, // Animation only once
-      offset: 200, // Start animation when element is 200px below viewport
-      easing: 'ease-in-out',
-    });
-  }, []);
+    if (config) { // Only initialize AOS when config is loaded
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 200,
+        easing: 'ease-in-out',
+      });
+    }
+  }, [config]); // Add config as dependency
+
+  if (loading) {
+    return null
+  }
+  if (error) {
+    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
+  }
+
+  const PAGES = config.pages
 
   return (
     <Router>
