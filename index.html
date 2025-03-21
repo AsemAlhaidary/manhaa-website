@@ -12,4 +12,9 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+  <script>
+    const configScript = document.createElement('script');
+    configScript.src = '/config/config.js?v=' + Date.now();
+    document.head.appendChild(configScript);
+  </script>
 </html>

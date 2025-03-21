@@ -8,9 +8,8 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 import { Home, Services, Projects, Project, Customers, Contact, NoMatch } from './pages'
-import { Container, Header, Footer, SiteDecorator } from './components'
+import { Header, Footer } from './components'
 import { useConfig } from './components/ConfigLoader'
-// import { config } from './data'
 
 function App() {
   const { config, loading, error } = useConfig()
@@ -37,20 +36,17 @@ function App() {
 
   return (
     <Router>
-      <Container>
-        <Header />
-        <Routes>
-          <Route path={PAGES.home.link} element={<Home theme='dark' />} />
-          <Route path={PAGES.services.link} element={<Services theme='dark' />} />
-          <Route path={PAGES.projects.link} element={<Projects theme='dark' />} />
-          <Route path={`${PAGES.project.link}/:projectId`} element={<Project theme='light' />} />
-          <Route path={PAGES.customers.link} element={<Customers theme='light' />} />
-          <Route path={PAGES.contact.link} element={<Contact theme='dark' />} />
-          <Route path={PAGES.noMatch.link} element={<NoMatch theme='dark' />} />
-        </Routes>
-        <Footer />
-      </Container>
-      <SiteDecorator />
+      <Header />
+      <Routes>
+        <Route path={PAGES.home.link} element={<Home theme='dark' />} />
+        <Route path={PAGES.services.link} element={<Services theme='dark' />} />
+        <Route path={PAGES.projects.link} element={<Projects theme='dark' />} />
+        <Route path={`${PAGES.project.link}/:projectId`} element={<Project theme='light' />} />
+        <Route path={PAGES.customers.link} element={<Customers theme='light' />} />
+        <Route path={PAGES.contact.link} element={<Contact theme='dark' />} />
+        <Route path={PAGES.noMatch.link} element={<NoMatch theme='dark' />} />
+      </Routes>
+      <Footer />
     </Router>
   )
 }

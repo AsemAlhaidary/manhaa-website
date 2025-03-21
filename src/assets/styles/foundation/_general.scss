@@ -30,16 +30,6 @@ body {
   }
 }
 
-#root {
-  position: relative;
-}
-
-#site-container {
-  height: auto;
-  min-height: 100vh;
-  @include glassmorphism($value: blur(50px));
-}
-
 .controller {
   display: none;
 }
