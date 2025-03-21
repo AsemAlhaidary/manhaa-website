@@ -2,6 +2,7 @@ const config = {
   siteName: 'منحى',
   logoPath: '/src/assets/imgs/logo.png',
   activeIcon: '/src/assets/imgs/active-icon.png',
+  copyright: '@جميع الحقوق محفوظة لموقع manhaa.com',
   pages: {
     home: {
       title: 'الرئيسية',

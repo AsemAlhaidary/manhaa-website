@@ -14,7 +14,6 @@ export default function ProjectsSection() {
     setCategories(uniqueCategories);
   }, []);
 
-
   return (
     <div className='col projects-sect-container'>
       <div className='tools-sect'>
