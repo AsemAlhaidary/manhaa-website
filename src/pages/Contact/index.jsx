@@ -1,9 +1,8 @@
 import { useEffect } from 'react'
 
-// import { config } from '../data'
-import { SectionHeading } from '../components/elements'
-import { ContactForm } from '../components/elements'
-import { useConfig } from '../components/ConfigLoader'
+import { SectionHeading } from '../../components/elements'
+import { ContactForm } from '../../components/elements'
+import { useConfig } from '../../hooks'
 
 export default function Contact({ theme }) {
   const { config, loading, error } = useConfig()

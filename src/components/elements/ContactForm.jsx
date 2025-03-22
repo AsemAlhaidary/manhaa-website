@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import Swal from 'sweetalert2'
-import { useConfig } from '../ConfigLoader'
+import { useConfig } from '../../hooks'
 
 export default function ContactForm() {
   const { config, loading, error } = useConfig()

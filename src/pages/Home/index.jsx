@@ -1,14 +1,17 @@
 import { useEffect } from 'react'
 
-import { useConfig } from '../hooks'
+import { useConfig } from '../../hooks'
 
-export default function NoMatch({ theme }) {
+import AboutUs from './AboutUs'
+import Hero from './Hero'
+
+export default function Home({ theme }) {
   const { config, loading, error } = useConfig()
 
   useEffect(() => {
     if (!config) return
 
-    document.title = config.pages.noMatch.title + ' - ' + config.siteName
+    document.title = config.pages.home.title + ' - ' + config.siteName
 
     const htmlElement = document.documentElement
     htmlElement.setAttribute('data-theme', theme)
@@ -27,6 +30,9 @@ export default function NoMatch({ theme }) {
   }
 
   return (
-    <h1>NoMatch</h1>
+    <>
+      <Hero />
+      <AboutUs />
+    </>
   );
 }

@@ -9,7 +9,7 @@ import 'aos/dist/aos.css'
 
 import { Home, Services, Projects, Project, Customers, Contact, NoMatch } from './pages'
 import { Header, Footer } from './components'
-import { useConfig } from './components/ConfigLoader'
+import { useConfig } from './hooks'
 
 function App() {
   const { config, loading, error } = useConfig()

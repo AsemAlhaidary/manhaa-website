@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 
-import { useConfig } from '../ConfigLoader'
+import { useConfig } from '../../hooks'
 
 export default function HeaderNav() {
   const { config, loading, error } = useConfig()

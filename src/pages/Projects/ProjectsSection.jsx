@@ -1,8 +1,9 @@
 import { useState, useEffect, Fragment, useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { ProjectCard } from '.'
-import { SearchField, SelectField } from './elements/form'
-import { useConfig } from './ConfigLoader'
+
+import ProjectCard from './ProjectCard'
+import { SearchField, SelectField } from '../../components/elements/form'
+import { useConfig } from '../../hooks'
 
 export default function ProjectsSection() {
   const { config, loading, error } = useConfig()

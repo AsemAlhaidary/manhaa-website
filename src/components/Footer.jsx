@@ -1,7 +1,5 @@
-import React from 'react'
-
 import { Logo } from './elements'
-import { useConfig } from './ConfigLoader'
+import { useConfig } from '../hooks'
 
 export default function Footer() {
   const { config, loading, error } = useConfig()

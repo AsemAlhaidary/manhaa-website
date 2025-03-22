@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Logo, HeaderNav, Button } from './elements'
-import { useConfig } from './ConfigLoader'
+import { useConfig } from '../hooks'
 
 export default function Header() {
   const { config, loading, error } = useConfig()

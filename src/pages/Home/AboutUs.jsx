@@ -1,4 +1,4 @@
-import { useConfig } from './ConfigLoader'
+import { useConfig } from '../../hooks/useConfig'
 
 export default function AboutUs() {
   const { config, loading, error } = useConfig()

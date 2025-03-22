@@ -1,12 +1,10 @@
-import { Fragment } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css' // Swiper core styles
-import 'swiper/css/navigation' // Navigation module styles
-import 'swiper/css/pagination' // Pagination module styles
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 
-import { useConfig } from '../ConfigLoader'
-// import { config } from '../../data'
+import { useConfig } from '../../hooks'
 
 export default function CustomersSlider() {
   const { config, loading, error } = useConfig()

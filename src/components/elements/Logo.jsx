@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import { useConfig } from '../ConfigLoader'
-// import { config } from '../../data'
+import { useConfig } from '../../hooks'
 
 export default function Logo() {
   const { config, loading, error } = useConfig()

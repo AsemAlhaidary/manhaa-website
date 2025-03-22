@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react'
 
-import { SectionHeading } from '../components/elements'
-import { useConfig } from '../components/ConfigLoader'
+import { SectionHeading } from '../../components/elements'
+import { useConfig } from '../../hooks'
 
 export default function Services({ theme }) {
   const { config, loading, error } = useConfig()

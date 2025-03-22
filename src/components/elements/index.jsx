@@ -4,7 +4,6 @@ import HeaderNav from './HeaderNav'
 import SectionHeading from './SectionHeading'
 import CategoriesList from './CategoriesList'
 import Category from './Category'
-import CustomersSlider from './CustomersSlider'
 import ContactForm from './ContactForm'
 
 export {
@@ -14,6 +13,5 @@ export {
   SectionHeading,
   CategoriesList,
   Category,
-  CustomersSlider,
   ContactForm
 }

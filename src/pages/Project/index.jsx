@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react'
 import { useParams } from 'react-router-dom'
-import { Button, CategoriesList } from '../components/elements'
-import { useConfig } from '../components/ConfigLoader'
+import { Button, CategoriesList } from '../../components/elements'
+import { useConfig } from '../../hooks'
 
 export default function Project({ theme }) {
   const { config, loading, error } = useConfig()

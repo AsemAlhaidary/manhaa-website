@@ -1,9 +1,8 @@
 import { useEffect } from 'react'
 
-// import { config } from '../data'
-import { ProjectsSection } from '../components'
-import { SectionHeading } from '../components/elements'
-import { useConfig } from '../components/ConfigLoader'
+import ProjectsSection from './ProjectsSection'
+import { SectionHeading } from '../../components/elements'
+import { useConfig } from '../../hooks'
 
 export default function Projects({ theme }) {
   const { config, loading, error } = useConfig()
