@@ -51,6 +51,20 @@ window.clientConfig = {
     home: {
       heroVideoSrc: '/videos/home-hero.mp4',
       heroVideoThumbnail: '/imgs/home-thumbnail.jpg',
+      aboutUs: [
+        {
+          title: 'قصتنا',
+          description: 'نحن أكثر من مجرد كيان إعلامي نحن مصنع للإفكار وشركاء في النجاح نسعة لإحداث فرق في كل رسالة وكل قصة نرويها لنترك إثرا إبداعيا يثري ويبتكر.'
+        },
+        {
+          title: 'رؤيتنا',
+          description: 'أن نكون المقصد الأول في المملكة لصناعة الفكرة, والذهاب بها الى منحى أبعد مما يمكن تصوره.'
+        },
+        {
+          title: 'غايتنا',
+          description: 'نساعد أهدافك على أن تسمع, ترى, وتحس. نخلق تجارب أصيلة تترك أثرا دائما.'
+        },
+      ]
     },
     services: {
       services: [
@@ -222,6 +236,11 @@ window.clientConfig = {
           title: 'تم!',
           text: 'لقد تم إرسال رسالتك بنجاح, سنرد عليك في اقرب وقت ممكن.',
           icon: 'success'
+        },
+        onError: {
+          title: 'خطأ!',
+          text: 'حدث خطأ أثناء الإرسال',
+          icon: 'error'
         }
       }
     }

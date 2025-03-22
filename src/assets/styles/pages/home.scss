@@ -2,6 +2,8 @@
 @use "../foundation/mixins" as *;
 
 .home {
+  $bottom-space: 1rem;
+  padding-bottom: $bottom-space;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,15 +67,17 @@
     }
 
     @media screen and (min-width: #{$md-size}) {
-      $video-height: 50vh;
+      $video-height: 70vh;
+      height: $video-height;
       flex-direction: row;
 
       .video-section {
         // $edge-space: calc((100vw - var(--content-width)) / 2);
         position: absolute;
-        top: 50%;
+        // top: 50%;
         left: 0;
-        transform: translateY(-50%);
+        bottom: $bottom-space;
+        // transform: translateY(-50%);
         width: 70vw;
         height: $video-height;
         aspect-ratio: unset;

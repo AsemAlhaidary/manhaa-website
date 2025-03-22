@@ -40,9 +40,9 @@ export default function ContactForm() {
       event.target.reset()
     } else {
       Swal.fire({
-        title: 'خطأ!',
-        text: 'حدث خطأ أثناء الإرسال',
-        icon: 'error'
+        title: form.onError.title,
+        text: form.onError.text,
+        icon: form.onError.icon
       })
       setResult(data.message)
       console.log('Error', result)
