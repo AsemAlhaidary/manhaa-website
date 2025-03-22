@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { useConfig } from '../ConfigLoader'
 // import { config } from '../../data'
@@ -13,11 +13,11 @@ export default function Logo() {
   }
 
   return (
-    <NavLink
+    <Link
       to={config.pages.home.link}
       className='logo-link order-1 mb'
     >
       <img src={config.logoPath} alt={config.siteName} className='logo' />
-    </NavLink>
+    </Link>
   )
 }

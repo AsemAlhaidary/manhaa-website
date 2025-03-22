@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 
 import { CategoriesList } from './elements'
 import { useConfig } from './ConfigLoader'
-// import { config } from '../data'
 
 export default function ProjectCard({ project, className }) {
   const { config, loading, error } = useConfig()
