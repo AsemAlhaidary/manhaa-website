@@ -1,6 +1,5 @@
 import React from 'react'
 
-// import { config } from '../data'
 import { Logo } from './elements'
 import { useConfig } from './ConfigLoader'
 
@@ -18,10 +17,8 @@ export default function Footer() {
   return (
     <footer>
       <div className='row wrapper'>
-        <div className='col order-0 mb'>
-          <Logo />
-        </div>
-        <div className='col order-1 mb'>
+        <div className='col'>
+          <span className='heading-font'>تواصل معنا</span>
           <div className='social-media-list'>
             {socialMedia.social.map((social, index) => (
               <a key={index} className='social-link' href={social.url} title={social.name}>
@@ -29,6 +26,9 @@ export default function Footer() {
               </a>
             ))}
           </div>
+        </div>
+        <div className='col'>
+          <Logo />
         </div>
       </div>
       <div className='row wrapper footer-copy'>

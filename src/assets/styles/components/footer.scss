@@ -5,13 +5,14 @@ footer {
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
-  background-color: var(--primary);
+  background-color: var(--footerColor);
   @include container-shadow;
 
   .row {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     &.footer-copy {
       justify-content: center;
