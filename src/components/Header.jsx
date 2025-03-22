@@ -35,7 +35,7 @@ export default function Header() {
           <Button 
             text={config.pages.contact.title} 
             variant="primary" 
-            action={`${config.pages.home.link}#contact-us`} 
+            action={config.pages.contact.link} 
           />
         </div>
       </div>

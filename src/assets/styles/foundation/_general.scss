@@ -7,10 +7,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   --container-max-width: $sm-size;
   background-color: var(--primary);

@@ -43,7 +43,7 @@ function App() {
         <Route path={PAGES.projects.link} element={<Projects theme='dark' />} />
         <Route path={`${PAGES.project.link}/:projectId`} element={<Project theme='light' />} />
         <Route path={PAGES.customers.link} element={<Customers theme='light' />} />
-        {/* <Route path={PAGES.contact.link} element={<Contact theme='dark' />} /> */}
+        <Route path={PAGES.contact.link} element={<Contact theme='dark' />} />
         <Route path={PAGES.noMatch.link} element={<NoMatch theme='dark' />} />
       </Routes>
       <Footer />
