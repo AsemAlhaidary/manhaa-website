@@ -28,6 +28,13 @@
           margin: 2rem var(--card-inner-gap);
           border: 1px solid var(--accent);
           border-radius: 1px;
+          box-shadow:
+            0 0 5px var(--transparentAccent),
+            0 0 15px var(--transparentAccent),
+            0 0 25px var(--transparentAccent),
+            0 0 35px var(--transparentAccent),
+            0 0 45px var(--transparentAccent),
+            0 0 55px var(--transparentAccent);
         }
       }
 
