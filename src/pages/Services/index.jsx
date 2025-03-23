@@ -76,11 +76,7 @@ export default function Services({ theme }) {
             className={`col service-details${selectedService === service.id ? ' active' : ''}`}
           >
             <SectionHeading title={service.title} />
-            <p
-              data-aos='fade-up'
-              data-aos-delay='200'
-              className='description content-font'
-            >{service.description}</p>
+            <p className='description content-font'>{service.description}</p>
           </div>
         ))}
       </div>

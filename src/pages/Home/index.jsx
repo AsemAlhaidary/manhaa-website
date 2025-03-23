@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import './home.scss'
+// import './home.scss'
 import { useConfig } from '../../hooks'
 import AboutUs from './AboutUs'
 import Hero from './Hero'

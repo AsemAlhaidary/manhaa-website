@@ -1,3 +1,4 @@
+import './aboutUs.scss'
 import { useConfig } from '../../hooks/useConfig'
 
 export default function AboutUs() {

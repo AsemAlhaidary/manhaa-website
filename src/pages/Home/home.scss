@@ -1,7 +1,8 @@
 @use "../../assets/styles/foundation/variables" as *;
 @use "../../assets/styles/foundation/mixins" as *;
+@use "./aboutUs";
 
-.home {
+.container.home {
   $bottom-space: 1rem;
   padding-bottom: $bottom-space;
   display: flex;
