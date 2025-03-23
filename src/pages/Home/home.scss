@@ -72,19 +72,13 @@
       flex-direction: row;
 
       .video-section {
-        // $edge-space: calc((100vw - var(--content-width)) / 2);
         position: absolute;
-        // top: 50%;
         left: 0;
         bottom: $bottom-space;
-        // transform: translateY(-50%);
         width: 70vw;
         height: $video-height;
         aspect-ratio: unset;
         z-index: -1;
-
-        // .video-container {
-        // }
       }
     }
   }
