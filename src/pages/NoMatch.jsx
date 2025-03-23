@@ -19,12 +19,8 @@ export default function NoMatch({ theme }) {
     }
   }, [theme, config])
 
-  if (loading) {
-    return null
-  }
-  if (error) {
-    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
-  }
+  if (loading) return null
+  if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
 
   return (
     <h1>NoMatch</h1>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 
+import '../../assets/styles/pages/contact.scss'
 import { SectionHeading } from '../../components/elements'
 import { ContactForm } from '../../components/elements'
 import { useConfig } from '../../hooks'
@@ -21,12 +22,8 @@ export default function Contact({ theme }) {
     }
   }, [theme, config])
 
-  if (loading) {
-    return null
-  }
-  if (error) {
-    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
-  }
+  if (loading) return null
+  if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
   const socialMedia = config.siteContent.contact.socialMedia
 
   return (

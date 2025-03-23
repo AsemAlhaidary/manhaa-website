@@ -25,12 +25,8 @@ function App() {
     }
   }, [config]); // Add config as dependency
 
-  if (loading) {
-    return null
-  }
-  if (error) {
-    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
-  }
+  if (loading) return null
+  if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
 
   const PAGES = config.pages
 

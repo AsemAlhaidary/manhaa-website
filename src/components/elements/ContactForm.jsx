@@ -8,12 +8,8 @@ export default function ContactForm() {
 
   const [result, setResult] = useState('')
 
-  if (loading) {
-    return null
-  }
-  if (error) {
-    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
-  }
+  if (loading) return null
+  if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
   const form = config.siteContent.contact.form
 
   const onSubmit = async (event) => {

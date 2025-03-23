@@ -1,5 +1,6 @@
 import { useEffect, useState, useMemo } from 'react'
 
+import '../../assets/styles/pages/services.scss'
 import { SectionHeading } from '../../components/elements'
 import { useConfig } from '../../hooks'
 
@@ -34,12 +35,8 @@ export default function Services({ theme }) {
     }
   }, [theme, config])
 
-  if (loading) {
-    return null
-  }
-  if (error) {
-    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
-  }
+  if (loading) return null
+  if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
 
   const handleServiceClick = (serviceId) => {
     setSelectedService(serviceId)

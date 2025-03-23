@@ -5,12 +5,8 @@ import { useConfig } from '../../hooks'
 
 export default function ProjectCard({ project, className }) {
   const { config, loading, error } = useConfig()
-  if (loading) {
-    return null
-  }
-  if (error) {
-    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
-  }
+  if (loading) return null
+  if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
 
   // Create URL-friendly ID
   const projectId = encodeURIComponent(project.title)

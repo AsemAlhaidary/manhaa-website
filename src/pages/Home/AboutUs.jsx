@@ -2,12 +2,8 @@ import { useConfig } from '../../hooks/useConfig'
 
 export default function AboutUs() {
   const { config, loading, error } = useConfig()
-  if (loading) {
-    return null
-  }
-  if (error) {
-    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
-  }
+  if (loading) return null
+  if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
 
   const aboutUs = config.siteContent.home.aboutUs
 

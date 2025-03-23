@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
+import '../../assets/styles/pages/home.scss'
 import { useConfig } from '../../hooks'
-
 import AboutUs from './AboutUs'
 import Hero from './Hero'
 
@@ -22,12 +22,8 @@ export default function Home({ theme }) {
     }
   }, [theme, config])
 
-  if (loading) {
-    return null
-  }
-  if (error) {
-    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
-  }
+  if (loading) return null
+  if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
 
   return (
     <>

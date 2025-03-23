@@ -1,5 +1,7 @@
 import { useEffect, useMemo } from 'react'
 import { useParams } from 'react-router-dom'
+
+import '../../assets/styles/pages/project.scss'
 import { Button, CategoriesList } from '../../components/elements'
 import { useConfig } from '../../hooks'
 
@@ -26,12 +28,8 @@ export default function Project({ theme }) {
     }
   }, [theme, project, config])
 
-  if (loading) {
-    return null
-  }
-  if (error) {
-    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
-  }
+  if (loading) return null
+  if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
 
   if (!project) return <div>هذا المشروع غير موجود</div>
 

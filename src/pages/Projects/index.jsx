@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 
+import '../../assets/styles/pages/projects.scss'
 import ProjectsSection from './ProjectsSection'
 import { SectionHeading } from '../../components/elements'
 import { useConfig } from '../../hooks'
@@ -21,12 +22,8 @@ export default function Projects({ theme }) {
     }
   }, [theme, config])
 
-  if (loading) {
-    return null
-  }
-  if (error) {
-    return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
-  }
+  if (loading) return null
+  if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
 
   return (
     <section className='container projects decorator-top-right decorator-bottom-left'>
