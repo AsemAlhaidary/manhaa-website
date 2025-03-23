@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react'
 import { useParams } from 'react-router-dom'
 
-import '../../assets/styles/pages/project.scss'
+import './project.scss'
 import { Button, CategoriesList } from '../../components/elements'
 import { useConfig } from '../../hooks'
 

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import '../../assets/styles/pages/customers.scss'
+import './customers.scss'
 import { SectionHeading } from '../../components/elements'
 import CustomersSlider from './CustomersSlider'
 import { useConfig } from '../../hooks'

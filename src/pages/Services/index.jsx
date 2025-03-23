@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from 'react'
 
-import '../../assets/styles/pages/services.scss'
+import './services.scss'
 import { SectionHeading } from '../../components/elements'
 import { useConfig } from '../../hooks'
 

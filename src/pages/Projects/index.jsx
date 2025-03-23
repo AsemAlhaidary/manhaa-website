@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import '../../assets/styles/pages/projects.scss'
+import './projects.scss'
 import ProjectsSection from './ProjectsSection'
 import { SectionHeading } from '../../components/elements'
 import { useConfig } from '../../hooks'

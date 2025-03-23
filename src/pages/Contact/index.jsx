@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import '../../assets/styles/pages/contact.scss'
+import './contact.scss'
 import { SectionHeading } from '../../components/elements'
 import { ContactForm } from '../../components/elements'
 import { useConfig } from '../../hooks'
