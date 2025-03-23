@@ -26,7 +26,7 @@ export default function Customers({ theme }) {
   if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
 
   return (
-    <section className='container customers'>
+    <section className='container customers decorator-top-right decorator-bottom-left'>
       <div className='row wrapper'>
         <SectionHeading title={config.pages.customers.title} />
         <CustomersSlider />
