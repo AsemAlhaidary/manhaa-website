@@ -22,7 +22,6 @@
       display: flex;
       width: 100%;
       aspect-ratio: 16/9;
-      @include container-shadow;
 
       .video-container {
         position: relative;
@@ -37,7 +36,7 @@
           right: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(to left, var(--primary), transparent);
+          background: linear-gradient(to left, var(--primary) 2%, var(--transparentPrimary) 30%, transparent);
           pointer-events: none;
         }
 
@@ -66,19 +65,25 @@
         }
       }
     }
+  }
 
-    @media screen and (min-width: #{$md-size}) {
-      $video-height: 70vh;
+  @media screen and (min-width: #{$md-size}) {
+    justify-content: flex-end;
+
+    .row {
+      $video-width: 70vw;
+      $video-height: calc(#{$video-width} / (16/9));
       height: $video-height;
+      max-height: 70vh;
       flex-direction: row;
 
       .video-section {
         position: absolute;
         left: 0;
         bottom: $bottom-space;
-        width: 70vw;
+        width: $video-width;
         height: $video-height;
-        aspect-ratio: unset;
+        max-height: 70vh;
         z-index: -1;
       }
     }

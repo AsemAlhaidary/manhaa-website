@@ -108,13 +108,14 @@ header {
   width: 100%;
   padding: 0.5rem 1rem;
   height: $header-height;
-  background-color: var(--transparentPrimary);
+  background-color: transparent;
   transition: $site-transition;
   z-index: 5;
-  @include glassmorphism;
 
   &.scroll {
+    background-color: var(--transparentPrimary);
     @include container-shadow;
+    @include glassmorphism;
   }
 
   .row {
