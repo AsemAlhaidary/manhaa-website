@@ -29,7 +29,7 @@ export default function Hero() {
             data-aos-delay='200'
             role='heading'
             aria-level='1'
-            className='h1 text-right'
+            className='h1 text-right heading-font'
           >
             نأخذك لمنحى<br />
             آخــــــــــــــــر

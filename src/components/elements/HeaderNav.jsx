@@ -27,7 +27,7 @@ export default function HeaderNav() {
                   `header-navbar-link active-effect${isActive ? ' active' : ''}`
                 }
               >
-                <span className='navbar-link-text'>{MENU[key].title()}</span>
+                <span className='navbar-link-text heading-font'>{MENU[key].title()}</span>
               </NavLink>
             </li>
           ))}

@@ -19,10 +19,13 @@ footer {
     }
 
     .col {
+      * {
+        color: #ffffff;
+      }
+
       .footer-text {
         text-align: center;
         font-size: 0.8rem;
-        color: var(--primaryText);
         opacity: 0.7;
       }
 

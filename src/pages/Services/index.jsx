@@ -62,7 +62,7 @@ export default function Services({ theme }) {
                   <img src={service.icon} alt={service.title} title={service.title} />
                 </div>
                 <div className='service-title'>
-                  <span role='heading' aria-level='2' className='h2 content-font'>{service.title}</span>
+                  <span role='heading' aria-level='2' className='h2 content-font' dangerouslySetInnerHTML={{ __html: service.title }} />
                 </div>
               </li>
             ))}
@@ -75,8 +75,8 @@ export default function Services({ theme }) {
             key={service.id}
             className={`col service-details${selectedService === service.id ? ' active' : ''}`}
           >
-            <SectionHeading title={service.title} />
-            <p className='description content-font'>{service.description}</p>
+            <SectionHeading title={service.title} type='html' />
+            <p className='description content-font' dangerouslySetInnerHTML={{ __html: service.description }} />
           </div>
         ))}
       </div>

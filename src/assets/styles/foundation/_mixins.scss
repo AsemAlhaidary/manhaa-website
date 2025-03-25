@@ -226,3 +226,9 @@
   filter: blur(150px);
   z-index: -1;
 }
+
+@mixin glow-effect($target: box) {
+  #{$target}-shadow:
+    0 0 5px var(--transparentAccent),
+    0 0 15px var(--transparentAccent);
+}
