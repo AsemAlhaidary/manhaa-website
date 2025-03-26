@@ -21,6 +21,7 @@
 
         .social-username {
           direction: ltr;
+          font-size: 1.5rem;
         }
 
         .social-media-list {
@@ -28,6 +29,8 @@
           gap: 0.5rem;
 
           .social-link {
+            font-size: 1.5rem;
+
             span {
               color: var(--accent);
             }

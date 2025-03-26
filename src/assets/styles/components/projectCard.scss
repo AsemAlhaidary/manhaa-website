@@ -10,21 +10,8 @@
   flex-direction: column;
   gap: $card-gap;
 
-  @media screen and (min-width: #{$md-size}) {
-    flex-direction: row;
-    align-items: center;
-
-    &.reverse {
-      flex-direction: row-reverse;
-    }
-
-    .img-sect {
-      width: 60%;
-    }
-
-    .details-sect {
-      width: 40%;
-    }
+  a {
+    display: flex;
   }
 
   .details-sect {
@@ -43,21 +30,39 @@
     }
   }
 
-  .img-sect {
+  .media-sect {
     width: 100%;
     display: flex;
     overflow: hidden;
+    @include video;
 
-    a {
-      display: flex;
+    .video {
+      border-radius: calc($card-border-radius - ($card-gap / 2));
+    }
 
-      .thumbnail {
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        aspect-ratio: 16/9;
-        border-radius: calc($card-border-radius - ($card-gap / 2));
-      }
+    .thumbnail {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      aspect-ratio: 16/9;
+      border-radius: calc($card-border-radius - ($card-gap / 2));
+    }
+  }
+
+  @media screen and (min-width: #{$md-size}) {
+    flex-direction: row;
+    align-items: center;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .media-sect {
+      width: 60%;
+    }
+
+    .details-sect {
+      width: 40%;
     }
   }
 }

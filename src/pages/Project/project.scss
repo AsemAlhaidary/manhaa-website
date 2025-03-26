@@ -1,3 +1,6 @@
+@use "../../assets/styles/foundation/variables" as *;
+@use "../../assets/styles/foundation/mixins" as *;
+
 .container.project {
   .row {
     .col {
@@ -45,6 +48,7 @@
         }
       }
 
+      @include video;
       .project-image {
         max-width: 100%;
         object-fit: cover;

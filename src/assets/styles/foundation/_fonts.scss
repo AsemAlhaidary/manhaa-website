@@ -25,26 +25,26 @@ $fatimah: "/src/assets/fonts/Fatimah";
 //   src: url("#{$almarai}/ExtraBold.ttf") format("TrueType");
 // }
 
-@font-face {
-  font-family: "Fatimah";
-  font-weight: lighter;
-  src: url("#{$fatimah}/Light.otf") format("OpenType");
-}
-
 // @font-face {
 //   font-family: "Fatimah";
-//   font-weight: normal;
-//   src: url("#{$fatimah}/Regular.otf") format("OpenType");
+//   font-weight: lighter;
+//   src: url("#{$fatimah}/Light.otf") format("OpenType");
 // }
 
 @font-face {
   font-family: "Fatimah";
+  font-weight: normal;
+  src: url("#{$fatimah}/Regular.otf") format("OpenType");
+}
+
+@font-face {
+  font-family: "Fatimah-bl";
   font-weight: bold;
   src: url("#{$fatimah}/Blod.otf") format("OpenType");
 }
 
-// @font-face {
-//   font-family: "Fatimah";
-//   font-weight: bolder;
-//   src: url("#{$fatimah}/Black.otf") format("OpenType");
-// }
+@font-face {
+  font-family: "Fatimah-bk";
+  font-weight: bolder;
+  src: url("#{$fatimah}/Black.otf") format("OpenType");
+}

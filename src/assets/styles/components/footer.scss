@@ -23,6 +23,10 @@ footer {
         color: #ffffff;
       }
 
+      .heading-font {
+        font-size: 1.4rem;
+      }
+
       .footer-text {
         text-align: center;
         font-size: 0.8rem;
@@ -33,6 +37,16 @@ footer {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+
+        .social-link {
+          font-size: 1.5rem;
+        }
+      }
+
+      .logo-link {
+        img {
+          height: 120px;
+        }
       }
     }
   }

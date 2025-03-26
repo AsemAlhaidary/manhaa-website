@@ -216,7 +216,9 @@ body {
 }
 
 html[data-theme="light"] {
-  .logo-link img {
-    filter: unset;
+  header {
+    .logo-link img {
+      filter: unset;
+    }
   }
 }

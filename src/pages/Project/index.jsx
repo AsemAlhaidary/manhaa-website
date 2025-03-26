@@ -2,7 +2,7 @@ import { useEffect, useMemo } from 'react'
 import { useParams } from 'react-router-dom'
 
 import './project.scss'
-import { Button, CategoriesList } from '../../components/elements'
+import { Button, CategoriesList, Video } from '../../components/elements'
 import { useConfig } from '../../hooks'
 
 export default function Project({ theme }) {
@@ -52,12 +52,19 @@ export default function Project({ theme }) {
           data-aos-delay='200'
           className='col img-sect'
         >
-          <img
-            src={project.thumbnail}
-            alt={project.title}
-            className='project-image'
-            loading='lazy'
-          />
+          {project.mediaType == 'video' ? (
+            <Video
+              src={project.media}
+              thumbnail={config.generalThumbnail}
+            />
+          ) : (
+            <img
+              className='project-image'
+              src={project.media}
+              alt={project.title}
+              loading='lazy'
+            />
+          )}
         </div>
         <div
           data-aos='fade-up'

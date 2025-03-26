@@ -1,7 +1,13 @@
+@use "../../assets/styles/foundation/variables" as *;
+
 .container.customers {
+  height: 130vh;
+
   .row {
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 3rem;
 
     .col {
@@ -30,5 +36,9 @@
         }
       }
     }
+  }
+
+  @media screen and (min-width: #{$md-size}) {
+    height: 150vh;
   }
 }

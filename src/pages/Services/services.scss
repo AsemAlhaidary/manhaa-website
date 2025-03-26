@@ -3,7 +3,7 @@
 
 .container.services {
   .row {
-    $elem-gap: 3rem;
+    $elem-gap: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +24,7 @@
           gap: clamp(0.5rem, 1vw, 1rem);
 
           .active-effect {
-            @include activeEffect(clamp(30px, 8vw, 100px));
+            @include activeEffect(clamp(30px, 8vw, 50px));
           }
 
           .service-item {
@@ -44,10 +44,6 @@
                 width: 100%;
                 object-fit: contain;
                 object-position: center;
-
-                @media screen and (min-width: #{$md-size}) {
-                  transform: scale(0.6);
-                }
               }
             }
 
@@ -55,11 +51,15 @@
               .h2 {
                 display: block;
                 text-align: center;
-                font-size: clamp(0.5rem, 3vw, 1.2rem);
+                font-size: clamp(0.5rem, 3vw, 1rem);
                 font-weight: lighter;
               }
             }
           }
+        }
+
+        @media screen and (min-width: #{$md-size}) {
+          width: 50%;
         }
       }
     }
@@ -70,7 +70,7 @@
 
       .service-details {
         position: absolute;
-        max-width: clamp(95%, 35rem, 80%);
+        width: 95%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -84,17 +84,25 @@
           opacity: 1;
         }
 
-        .h1 {
+        .heading-font {
           display: block;
           width: 10ch;
           text-align: center;
+          line-height: 1;
         }
 
         .description {
           text-align: justify;
-          font-size: 1rem;
+        }
+      }
 
-          @media screen and (min-width: #{$md-size}) {
+      @media screen and (min-width: #{$md-size}) {
+        height: 80vh;
+
+        .service-details {
+          width: 50%;
+
+          .description {
             width: 80%;
           }
         }

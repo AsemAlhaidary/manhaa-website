@@ -75,7 +75,7 @@ export default function Services({ theme }) {
             key={service.id}
             className={`col service-details${selectedService === service.id ? ' active' : ''}`}
           >
-            <SectionHeading title={service.title} type='html' />
+            <SectionHeading title={service.title} type='html' level='3' />
             <p className='description content-font' dangerouslySetInnerHTML={{ __html: service.description }} />
           </div>
         ))}

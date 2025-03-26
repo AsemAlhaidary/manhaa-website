@@ -3,6 +3,7 @@ window.clientConfig = {
   logoPath: '/imgs/logo.png',
   activeIcon: '/imgs/active-icon.png',
   copyright: '@جميع الحقوق محفوظة لموقع manhaa.com',
+  generalThumbnail: '/imgs/home-thumbnail.jpg',
   pages: {
     home: {
       title: 'الرئيسية',
@@ -54,7 +55,7 @@ window.clientConfig = {
       aboutUs: [
         {
           title: 'قصتنا',
-          description: 'نحن أكثر من مجرد كيان إعلامي نحن مصنع للإفكار وشركاء في النجاح نسعة لإحداث فرق في كل رسالة وكل قصة نرويها لنترك إثرا إبداعيا يثري ويبتكر.'
+          description: 'نحن أكثر من مجرد كيان إعلامي نحن مصنع للإفكار وشركاء في النجاح نسعى لإحداث فرق في كل رسالة وكل قصة نرويها لنترك إثرا إبداعيا يثري ويبتكر.'
         },
         {
           title: 'رؤيتنا',
@@ -71,25 +72,25 @@ window.clientConfig = {
         {
           id: 'artistic-production',
           title: 'الإنتــاج<br />الفنــي',
-          description: '<ul><li>إعلانات تجارية.</li><li>تغطيات للفعاليات.</li><li>انتاج بودكاست مرئي ومسموع.</li><li>أفلام وثائقية.</li><li>تصوير فوتوغرافي.</li><li>تصوير بالواقع الافتراضي ( ٣٦٠ ).</li><li>الإنتاج الموسيقي والهويات السمعية.</li></ul>',
+          description: '<ul><li>إعلانات تجارية</li><li>تغطيات للفعاليات</li><li>انتاج بودكاست مرئي ومسموع</li><li>أفلام وثائقية</li><li>تصوير فوتوغرافي</li><li>تصوير بالواقع الافتراضي ( ٣٦٠ )</li><li>الإنتاج الموسيقي والهويات السمعية</li></ul>',
           icon: '/imgs/artistic-production.png'
-        },
-        {
-          id: 'marketing-consulting',
-          title: 'الإستشارات<br />التسويقيــــة',
-          description: '<ul><li>إعداد التوجه الاستراتيجي للخطة التسويقية.</li><li>تقييم الوضع الراهن وطرح آلية التحسين للإدارات السويقية بالجاهت.</li><li>تقديم الدورات في مجال التسويق والتصوير والإنتاج.</li></ul>',
-          icon: '/imgs/marketing-consulting.png'
         },
         {
           id: 'digital-marketing',
           title: 'التسويــق<br />الرقمــــــي',
-          description: '<ul><li>كتابة وتصميم ونشر المحتوى.</li><li>إعداد الخطة التسويقية.</li><li>إدارة الحملات التسويقية وتشغيلها.</li><li>تقارير الرصد والمتابعة.</li></ul>',
+          description: '<ul><li>كتابة وتصميم ونشر المحتوى</li><li>إعداد الخطة التسويقية</li><li>إدارة الحملات التسويقية وتشغيلها</li><li>تقارير الرصد والمتابعة</li></ul>',
           icon: '/imgs/digital-marketing.png'
+        },
+        {
+          id: 'marketing-consulting',
+          title: 'الإستشارات<br />التسويقيــــة',
+          description: '<ul><li>إعداد التوجه الاستراتيجي للخطة التسويقية</li><li>تقييم الوضع الراهن وطرح آلية التحسين للإدارات السويقية بالجاهت</li><li>تقديم الدورات في مجال التسويق والتصوير والإنتاج</li></ul>',
+          icon: '/imgs/marketing-consulting.png'
         },
         {
           id: 'media-consulting',
           title: 'الإستشارات<br />الإعلاميـــــة',
-          description: '<ul><li>إعداد التوجه الاستراتيجي للخطة الإعلامية.</li><li>إعداد البيانات الصحفية للجهات.</li><li>كتابة وتحرير الأخبار الصحفية.</li><li>نشر الأخبار في الوسائل الرسمية.</li></ul>',
+          description: '<ul><li>إعداد التوجه الاستراتيجي للخطة الإعلامية</li><li>إعداد البيانات الصحفية للجهات</li><li>كتابة وتحرير الأخبار الصحفية</li><li>نشر الأخبار في الوسائل الرسمية</li></ul>',
           icon: '/imgs/media-consulting-on.png'
         },
       ]
@@ -99,36 +100,32 @@ window.clientConfig = {
         {
           title: 'نحلم ونحقق',
           description: 'إعداد التوجه الاستراتيجي للخطة الإعلامية. إعداد البيانات الصحفية للجهات. كتابة وتحرير الأخبار الصحفية. نشر الأخبار في الوسائل الرسمية.',
-          thumbnail: '/imgs/projects/project-1.jpg',
+          media: '/videos/projects/Alsaigh Final.mp4',
+          mediaType: 'video',
           logo: '/imgs/clients/2كورة.png',
           customer: 'المركز السعودي للأعمال',
           categories: [
-            'فيديو',
-            'تصميم',
-            'صورة'
+            'فيديو'
           ]
         },
         {
           title: 'نحلم ونحقق',
           description: 'إعداد التوجه الاستراتيجي للخطة الإعلامية. إعداد البيانات الصحفية للجهات. كتابة وتحرير الأخبار الصحفية. نشر الأخبار في الوسائل الرسمية.',
-          thumbnail: '/imgs/projects/project-1.jpg',
+          media: '/videos/projects/Alsaigh Final.mp4',
+          mediaType: 'video',
           logo: '/imgs/clients/2كورة.png',
           customer: 'المركز السعودي للأعمال',
           categories: [
-            'فيديو',
-            'تصميم',
-            'صورة'
+            'فيديو'
           ]
         },
         {
           title: 'نحلم ونحقق',
           description: 'إعداد التوجه الاستراتيجي للخطة الإعلامية. إعداد البيانات الصحفية للجهات. كتابة وتحرير الأخبار الصحفية. نشر الأخبار في الوسائل الرسمية.',
-          thumbnail: '/imgs/projects/project-1.jpg',
+          media: '/imgs/projects/project-1.jpg',
           logo: '/imgs/clients/2كورة.png',
           customer: 'المركز السعودي للأعمال',
           categories: [
-            'فيديو',
-            'تصميم',
             'صورة'
           ]
         },

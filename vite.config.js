@@ -15,5 +15,8 @@ export default defineConfig({
   },
   server: {
     historyApiFallback: true,
+    allowedHosts: [
+      'vpn.isto.me'
+    ]
   },
 })

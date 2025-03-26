@@ -151,7 +151,7 @@
   position: relative;
 
   &::after {
-    $translateX: 75%;
+    $translateX: 50%;
     $translateY: ($translateX * -1);
     content: '';
     position: absolute;
@@ -161,7 +161,7 @@
       $translateX: ($translateX * -1);
     }
     transform: translate($translateX, $translateY);
-    width: 200vw;
+    width: 100vw;
     aspect-ratio: $fatha-ratio;
     background-image: $fatha-image;
     background-position: center;
@@ -231,4 +231,33 @@
   #{$target}-shadow:
     0 0 5px var(--transparentAccent),
     0 0 15px var(--transparentAccent);
+}
+
+@mixin video {
+  position: relative;
+
+  .video {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 16/9;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6rem;
+    aspect-ratio: 1/1;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: url('/imgs/video-play.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
 }
