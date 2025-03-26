@@ -27,9 +27,9 @@ export default function ProjectCard({ project, className }) {
       </Link>
       <div className='media-sect'>
         {project.mediaType == 'video' ? (
-          <Video
+          <iframe
+            className='video'
             src={project.media}
-            thumbnail={config.generalThumbnail}
           />
         ) : (
           <img

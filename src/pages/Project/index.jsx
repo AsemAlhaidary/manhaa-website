@@ -53,9 +53,9 @@ export default function Project({ theme }) {
           className='col img-sect'
         >
           {project.mediaType == 'video' ? (
-            <Video
+            <iframe
+              className='video'
               src={project.media}
-              thumbnail={config.generalThumbnail}
             />
           ) : (
             <img

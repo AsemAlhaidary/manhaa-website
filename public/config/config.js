@@ -98,25 +98,36 @@ window.clientConfig = {
     projects: {
       projects: [
         {
-          title: 'نحلم ونحقق',
-          description: 'إعداد التوجه الاستراتيجي للخطة الإعلامية. إعداد البيانات الصحفية للجهات. كتابة وتحرير الأخبار الصحفية. نشر الأخبار في الوسائل الرسمية.',
-          media: '/videos/projects/Alsaigh Final.mp4',
+          title: 'مركز الاعمال السعودي',
+          description: 'فيديو يوثق احتفال مركز الاعمال السعودي باليوم الوطني بروح الفخر والانتماء, متضمنا ذكر انجازات الشركة ومساهمتها بتحقيق الرؤية',
+          media: 'https://drive.google.com/file/d/1dJ0aeYkBOUFgakdsMH4kACsomyuY0ont/preview',
           mediaType: 'video',
-          logo: '/imgs/clients/2كورة.png',
+          logo: '/imgs/projects/المركز الأعمال السعودي.png',
           customer: 'المركز السعودي للأعمال',
           categories: [
-            'فيديو'
+            'فيديو',
           ]
         },
         {
-          title: 'نحلم ونحقق',
-          description: 'إعداد التوجه الاستراتيجي للخطة الإعلامية. إعداد البيانات الصحفية للجهات. كتابة وتحرير الأخبار الصحفية. نشر الأخبار في الوسائل الرسمية.',
-          media: '/videos/projects/Alsaigh Final.mp4',
+          title: 'فندق هيلتون',
+          description: 'فيديو يعرض تجربة متكاملة للإقامة في الفندق, مسلطا الضوء على الخدمات المقدمة والأجواء العائلية التي تجعله وجهة مثالية للعائلات',
+          media: 'https://drive.google.com/file/d/1hDG38u343zKAqXiFfqPlM5hUiAYc3Vre/preview',
           mediaType: 'video',
-          logo: '/imgs/clients/2كورة.png',
-          customer: 'المركز السعودي للأعمال',
+          logo: '/imgs/projects/هيلتون.png',
+          customer: 'فندق هيلتون',
           categories: [
-            'فيديو'
+            'فيديو',
+          ]
+        },
+        {
+          title: 'سيرمونيا ومجموعة راديسون',
+          description: 'فيديو يبرز جمال المنتجع ومرافقه الفريدة, مقدما تجربة بصرية آسرة تدعو الزوار للإسترخاء والإستمتاع بالطبيعة',
+          media: 'https://drive.google.com/file/d/1Z-kp5-6yRbjNpCavUg551Y0mNhpcKkCb/preview',
+          mediaType: 'video',
+          logo: '/imgs/projects/سيرمونيا  ومجموعة رادسيون.png',
+          customer: 'سيرمونيا ومجموعة راديسون',
+          categories: [
+            'فيديو',
           ]
         },
         {
@@ -126,7 +137,7 @@ window.clientConfig = {
           logo: '/imgs/clients/2كورة.png',
           customer: 'المركز السعودي للأعمال',
           categories: [
-            'صورة'
+            'صورة',
           ]
         },
       ]

@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 
 export default function Video({ src, thumbnail }) {
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(true)
   const videoRef = useRef(null)
 
   const togglePlay = () => {
@@ -16,7 +16,13 @@ export default function Video({ src, thumbnail }) {
 
   return (
     <>
-      <video ref={videoRef} className='video' onClick={togglePlay} poster={thumbnail}>
+      <video
+        ref={videoRef}
+        className='video'
+        onClick={togglePlay}
+        poster={thumbnail}
+        autoPlay
+      >
         <source src={src} type='video/mp4' />
       </video>
       {
