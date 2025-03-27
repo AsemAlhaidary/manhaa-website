@@ -25,6 +25,7 @@ export default function Contact({ theme }) {
   if (loading) return null
   if (error) return <div className='error-screen'>خطأ في تحميل الإعدادات: {error.message}</div>
   const socialMedia = config.siteContent.contact.socialMedia
+  const info = config.siteContent.contact.info
 
   return (
     <section className='container contact decorator-top-right'>
@@ -37,7 +38,14 @@ export default function Contact({ theme }) {
         <div className='col'>
           <div className='contact-container flex'>
             <div className='contact-info'>
-              <span className='social-username'>{socialMedia.username}</span>
+              <div className='contact-info-list'>
+                {info.map((info, index) => (
+                  <a key={index} className='info-link' href={info.url}>
+                    <span className={info.icon}></span>
+                    {info.info}
+                  </a>
+                ))}
+              </div>
               <div className='social-media-list'>
                 {socialMedia.social.map((social, index) => (
                   <a key={index} className='social-link' href={social.url} title={social.name}>

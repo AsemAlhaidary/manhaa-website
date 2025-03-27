@@ -22,6 +22,7 @@ export default function Video({ src, thumbnail }) {
         onClick={togglePlay}
         poster={thumbnail}
         autoPlay
+        muted
       >
         <source src={src} type='video/mp4' />
       </video>

@@ -55,15 +55,15 @@ window.clientConfig = {
       aboutUs: [
         {
           title: 'قصتنا',
-          description: 'نحن أكثر من مجرد كيان إعلامي نحن مصنع للإفكار وشركاء في النجاح نسعى لإحداث فرق في كل رسالة وكل قصة نرويها لنترك إثرا إبداعيا يثري ويبتكر.'
+          description: 'نحن أكثر من مجرد كيان إعلامي نحن مصنع للإفكار وشركاء في النجاح نسعى لإحداث فرق في كل رسالة وكل قصة نرويها لنترك إثرا إبداعيا يثري ويبتكر'
         },
         {
           title: 'رؤيتنا',
-          description: 'أن نكون المقصد الأول في المملكة لصناعة الفكرة, والذهاب بها الى منحى أبعد مما يمكن تصوره.'
+          description: 'أن نكون المقصد الأول في المملكة لصناعة الفكرة, والذهاب بها الى منحى أبعد مما يمكن تصوره'
         },
         {
           title: 'غايتنا',
-          description: 'نساعد أهدافك على أن تسمع, ترى, وتحس. نخلق تجارب أصيلة تترك أثرا دائما.'
+          description: 'نساعد أهدافك على أن تسمع, ترى, وتحس. نخلق تجارب أصيلة تترك أثرا دائما'
         },
       ]
     },
@@ -84,7 +84,7 @@ window.clientConfig = {
         {
           id: 'marketing-consulting',
           title: 'الإستشارات<br />التسويقيــــة',
-          description: '<ul><li>إعداد التوجه الاستراتيجي للخطة التسويقية</li><li>تقييم الوضع الراهن وطرح آلية التحسين للإدارات السويقية بالجاهت</li><li>تقديم الدورات في مجال التسويق والتصوير والإنتاج</li></ul>',
+          description: '<ul><li>إعداد التوجه الاستراتيجي للخطة التسويقية</li><li>تقييم الوضع الراهن وطرح آلية التحسين للإدارات السويقية بالجهات</li><li>تقديم الدورات في مجال التسويق والتصوير والإنتاج</li></ul>',
           icon: '/imgs/marketing-consulting.png'
         },
         {
@@ -207,28 +207,41 @@ window.clientConfig = {
       ]
     },
     contact: {
-      address: 'المملكة العربية السعودية - الرياض',
-      phone: '009665000000',
-      email: 'email@manhaa.com',
+      info: [
+        {
+          icon: 'fa-solid fa-location-dot',
+          info: 'المملكة العربية السعودية - الرياض',
+          url: ''
+        },
+        {
+          icon: 'fa-solid fa-phone',
+          info: '009665000000',
+          url: 'tel:009665000000'
+        },
+        {
+          icon: 'fa-solid fa-envelope',
+          info: 'hello@manhaa.com',
+          url: 'mailto:hello@manhaa.com'
+        },
+      ],
       socialMedia: {
-        username: '@manhaa',
         social: [
           {
             name: 'Instagram',
-            username: '@manhaa',
-            url: '',
+            username: '@manhaa_sa',
+            url: 'https://www.instagram.com/manhaa_sa/',
             icon: 'fa-brands fa-instagram'
           },
           {
             name: 'Linked In',
-            username: '@manhaa',
-            url: '',
+            username: '@manhaa-agency',
+            url: 'https://www.linkedin.com/company/manhaa-agency/',
             icon: 'fa-brands fa-linkedin'
           },
           {
             name: 'X',
-            username: '@manhaa',
-            url: '',
+            username: '@manhaa_sa',
+            url: 'https://x.com/manhaa_sa/',
             icon: 'fa-brands fa-x-twitter'
           },
         ]

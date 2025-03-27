@@ -19,9 +19,22 @@
         align-items: center;
         gap: 0.5rem;
 
-        .social-username {
-          direction: ltr;
-          font-size: 1.5rem;
+        .contact-info-list {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .info-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            text-decoration: none;
+
+            span {
+              color: var(--accent);
+            }
+          }
         }
 
         .social-media-list {
