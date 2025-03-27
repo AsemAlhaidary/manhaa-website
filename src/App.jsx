@@ -23,6 +23,16 @@ function App() {
         easing: 'ease-in-out',
       });
     }
+
+    console.log(`
+                                                          
+ _____                  _____ _ _       _   _             
+|  _  |___ ___ _____   |  _  | | |_ ___|_|_| |___ ___ _ _ 
+|     |_ -| -_|     |  |     | |   | .'| | . | .'|  _| | |
+|__|__|___|___|_|_|_|  |__|__|_|_|_|__,|_|___|__,|_| |_  |
+                                                     |___|
+`)
+      console.log('This site was developed by: Asem Alhaidary\nInstagram: (https://www.instagram.com/asemwebdeveloper/)')
   }, [config]); // Add config as dependency
 
   if (loading) return null
