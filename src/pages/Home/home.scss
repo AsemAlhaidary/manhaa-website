@@ -41,6 +41,12 @@
         }
       }
     }
+
+    .col {
+      .hero-title {
+        width: 300px;
+      }
+    }
   }
 
   @media screen and (min-width: #{$md-size}) {
@@ -61,6 +67,12 @@
         height: $video-height;
         max-height: 70vh;
         z-index: -1;
+      }
+
+      .col {
+        .hero-title {
+          width: 450px;
+        }
       }
     }
   }

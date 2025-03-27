@@ -215,8 +215,8 @@ window.clientConfig = {
         },
         {
           icon: 'fa-solid fa-phone',
-          info: '009665000000',
-          url: 'tel:009665000000'
+          info: '+966538020808',
+          url: 'tel:+966538020808'
         },
         {
           icon: 'fa-solid fa-envelope',

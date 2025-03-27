@@ -11,7 +11,12 @@ export default function Hero() {
     <section className='container home screen-height decorator-top-left'>
       <div className='row wrapper'>
         <div className='col'>
-          <span
+          <img
+            src='/imgs/نأخذك لمنحى أخـــــــــــــــــــر.png'
+            title='نأخذك لمنحى أخـــــــــــــــــــر'
+            className='hero-title'
+          />
+          {/* <span
             data-aos='fade-up'
             data-aos-delay='200'
             role='heading'
@@ -20,7 +25,7 @@ export default function Hero() {
           >
             نأخذك لمنحى<br />
             آخــــــــــــــــر
-          </span>
+          </span> */}
         </div>
         <div className='col video-section'>
           <div className='video-container'>

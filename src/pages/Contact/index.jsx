@@ -41,8 +41,8 @@ export default function Contact({ theme }) {
               <div className='contact-info-list'>
                 {info.map((info, index) => (
                   <a key={index} className='info-link' href={info.url}>
-                    <span className={info.icon}></span>
                     {info.info}
+                    <span className={info.icon}></span>
                   </a>
                 ))}
               </div>

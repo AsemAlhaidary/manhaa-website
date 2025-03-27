@@ -151,8 +151,8 @@
   position: relative;
 
   &::after {
-    $translateX: 50%;
-    $translateY: ($translateX * -1);
+    $translateX: 55%;
+    $translateY: (($translateX + 10) * -1);
     content: '';
     position: absolute;
     top: 0;
