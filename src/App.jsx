@@ -32,7 +32,7 @@ function App() {
 |__|__|___|___|_|_|_|  |__|__|_|_|_|__,|_|___|__,|_| |_  |
                                                      |___|
 `)
-      console.log('This site was developed by: Asem Alhaidary\nInstagram: (https://www.instagram.com/asemwebdeveloper/)')
+      console.log('This site was developed by: Asem Alhaidary\nInstagram: (https://www.instagram.com/asemwebdeveloper/)\nLinked In: (https://www.linkedin.com/in/asemalhaidary/)')
   }, [config]); // Add config as dependency
 
   if (loading) return null
