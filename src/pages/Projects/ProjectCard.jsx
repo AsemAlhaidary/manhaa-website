@@ -30,16 +30,11 @@ export default function ProjectCard({ project, className }) {
         <CategoriesList categories={project.categories} isLink={false} />
       </div>
       <div className='media-sect'>
-        <Link
-          to={`${config.pages.project.link}/${projectId}`}
-          className='media-link'
-        >
-          {project.mediaType === 'video' ? (
-            <iframe className='video' src={project.media} />
-          ) : (
-            <img className='thumbnail' src={project.media} alt={project.title} loading='lazy' />
-          )}
-        </Link>
+        {project.mediaType === 'video' ? (
+          <iframe className='video' src={project.media} />
+        ) : (
+          <img className='thumbnail' src={project.media} alt={project.title} loading='lazy' />
+        )}
       </div>
     </div>
   )

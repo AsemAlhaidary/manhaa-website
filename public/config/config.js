@@ -130,16 +130,6 @@ window.clientConfig = {
             'فيديو',
           ]
         },
-        {
-          title: 'نحلم ونحقق',
-          description: 'إعداد التوجه الاستراتيجي للخطة الإعلامية. إعداد البيانات الصحفية للجهات. كتابة وتحرير الأخبار الصحفية. نشر الأخبار في الوسائل الرسمية.',
-          media: '/imgs/projects/project-1.jpg',
-          logo: '/imgs/clients/2كورة.png',
-          customer: 'المركز السعودي للأعمال',
-          categories: [
-            'صورة',
-          ]
-        },
       ]
     },
     customers: {

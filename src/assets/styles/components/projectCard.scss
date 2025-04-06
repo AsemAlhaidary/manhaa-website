@@ -11,7 +11,17 @@
   gap: $card-gap;
 
   a {
+    max-width: 100%;
+    display: inline-block;
     text-decoration: none;
+    color: unset;
+    outline: unset;
+
+    span {
+      display: inline-block;
+      margin: 1rem 0;
+      line-height: 1;
+    }
   }
 
   .details-sect {
@@ -22,7 +32,8 @@
     gap: 0.5rem;
 
     .logo {
-      height: 5rem;
+      max-height: 5rem;
+      width: fit-content;
       max-width: 100%;
       display: block;
       object-fit: cover;
