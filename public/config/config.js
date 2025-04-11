@@ -135,64 +135,80 @@ window.clientConfig = {
     customers: {
       customers: [
         {
-          name: 'كورة',
-          logo: '/imgs/clients/كورة.png'
+          name: 'اهداف',
+          logo: '/imgs/clients/أهداف.png'
         },
         {
-          name: 'Light Tea',
-          logo: '/imgs/clients/light tea.png'
+          name: 'هيئة المتاحف',
+          logo: '/imgs/clients/هيئة المتاحف.png'
         },
         {
-          name: 'Tayyah',
-          logo: '/imgs/clients/TAYYAH.png'
+          name: 'وزارة شؤوون البلدية',
+          logo: '/imgs/clients/وزارة شؤوون البلدية.png'
         },
         {
-          name: 'شعار',
-          logo: '/imgs/clients/الشعار-مفرغ-بيج.png'
+          name: 'المركز السعودي',
+          logo: '/imgs/clients/المركز السعودي.png'
+        },
+        {
+          name: 'هيلتون',
+          logo: '/imgs/clients/هيلتون.png'
+        },
+        {
+          name: 'وزارة الثقافة',
+          logo: '/imgs/clients/وزارة الثقافة.png'
         },
         {
           name: 'العراب',
           logo: '/imgs/clients/العراب.png'
         },
         {
-          name: 'اهداف',
-          logo: '/imgs/clients/اهداف.png'
+          name: 'راديسون',
+          logo: '/imgs/clients/راديسون.png'
         },
         {
-          name: 'اوكازيون',
-          logo: '/imgs/clients/اوكازيون.png'
+          name: 'بلاك دايموند',
+          logo: '/imgs/clients/بلاك دايموند.png'
         },
         {
-          name: 'الركن الجديد',
-          logo: '/imgs/clients/شعار الركن الجديد (1).png'
-        },
-        {
-          name: 'صيحات',
-          logo: '/imgs/clients/شعار-صيحات.png'
-        },
-        {
-          name: 'وزارة الشؤون البلدية',
-          logo: '/imgs/clients/شعار_وزارة_الشؤون_البلدية.png'
-        },
-        {
-          name: 'شيغف',
-          logo: '/imgs/clients/شيغف.png'
-        },
-        {
-          name: 'فيونا',
-          logo: '/imgs/clients/فيونا.png'
-        },
-        {
-          name: 'الشعار',
-          logo: '/imgs/clients/متسطيل 10000+500.png'
+          name: 'سيرمونيا',
+          logo: '/imgs/clients/سيرمونيا.png'
         },
         {
           name: 'ممر',
           logo: '/imgs/clients/ممر.png'
         },
         {
-          name: 'هيئة المتاحف',
-          logo: '/imgs/clients/هيئة المتاحف.png'
+          name: 'اوزكازيون',
+          logo: '/imgs/clients/اوزكازيون.png'
+        },
+        {
+          name: 'شغف',
+          logo: '/imgs/clients/شغف.png'
+        },
+        {
+          name: 'كورة شور',
+          logo: '/imgs/clients/كورة شور.png'
+        },
+        {
+          name: 'كورة بلانت',
+          logo: '/imgs/clients/كورة بلانت.png'
+        },
+        {
+          name: 'فيونا',
+          logo: '/imgs/clients/فيونا.png'
+        },
+        {
+          name: 'صيحات',
+          logo: '/imgs/clients/صيحات.png'
+        },
+        {
+          name: 'لايت تي',
+          logo: '/imgs/clients/لايت تي.png'
+        },
+        {
+          name: 'Tayyah',
+          logo: '/imgs/clients/TAYYAH.png'
         },
       ]
     },
